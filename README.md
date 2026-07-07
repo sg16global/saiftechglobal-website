@@ -40,6 +40,15 @@ Then visit `http://localhost:3000`.
 - `css/site.css` — premium dark theme matching your logo
 - `assets/logo.png` — company logo
 
+## Search verification (Google / Bing / Edge)
+
+See **`verification/README.md`**. Repo root = public web root on Cloudflare Pages.
+
+Quick steps:
+1. Google Search Console → verify with HTML tag or HTML file in repo root
+2. Bing Webmaster → verify (covers Microsoft Edge search too)
+3. Submit sitemap: `https://saiftechglobal.com/sitemap.xml`
+
 ## Add a new app later
 
 Duplicate a `.product-card` block in `index.html` and change the name, description, and link.

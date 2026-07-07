@@ -1,6 +1,16 @@
 /*
-  Optional Cloudflare cache hints for static assets.
+  Cloudflare Pages headers (this folder = public web root, like public_html).
 */
+/index.html
+  Cache-Control: public, max-age=300
+/privacy.html
+  Cache-Control: public, max-age=300
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=86400
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=86400
 /assets/*
   Cache-Control: public, max-age=604800
 /css/*
