@@ -1,0 +1,7 @@
+/*
+  Optional Cloudflare cache hints for static assets.
+*/
+/assets/*
+  Cache-Control: public, max-age=604800
+/css/*
+  Cache-Control: public, max-age=604800
