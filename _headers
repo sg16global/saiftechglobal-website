@@ -5,13 +5,13 @@
 */
 /
   Cache-Control: public, max-age=300, s-maxage=3600
-  Link: </assets/logo.webp>; rel=preload; as=image; type=image/webp, </css/site.css?v=2>; rel=preload; as=style
+  Link: </assets/logo.webp>; rel=preload; as=image; type=image/webp, </css/site.css?v=3>; rel=preload; as=style
 /index.html
   Cache-Control: public, max-age=300, s-maxage=3600
-  Link: </assets/logo.webp>; rel=preload; as=image; type=image/webp, </css/site.css?v=2>; rel=preload; as=style
+  Link: </assets/logo.webp>; rel=preload; as=image; type=image/webp, </css/site.css?v=3>; rel=preload; as=style
 /privacy.html
   Cache-Control: public, max-age=300, s-maxage=3600
-  Link: </css/site.css?v=2>; rel=preload; as=style
+  Link: </css/site.css?v=3>; rel=preload; as=style
 /sitemap.xml
   Content-Type: application/xml; charset=utf-8
   Cache-Control: public, max-age=86400
