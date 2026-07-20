@@ -52,3 +52,7 @@ Quick steps:
 ## Add a new app later
 
 Duplicate a `.product-card` block in `index.html` and change the name, description, and link.
+
+Live products today:
+- **SG16 AI Engine** → https://sg16engine.com
+- **SaifGlobal16 Monitor** → https://www.saifglobal16.info
