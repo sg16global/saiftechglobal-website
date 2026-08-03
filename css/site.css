@@ -38,6 +38,9 @@
   --orange: #c76a16;
   --orange-bright: #ff9a3c;
   --orange-dim: rgba(199, 106, 22, 0.14);
+  --geo: #ff3c50;
+  --geo-bright: #ff6b7a;
+  --geo-dim: rgba(255, 60, 80, 0.14);
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
   --radius: 18px;
@@ -175,6 +178,15 @@ a {
   box-shadow: 0 10px 30px rgba(199, 106, 22, 0.35);
 }
 
+.nav-cta-geo {
+  background: linear-gradient(135deg, var(--geo-bright), var(--geo));
+  color: #fff;
+}
+
+.nav-cta-geo:hover {
+  box-shadow: 0 10px 30px rgba(255, 60, 80, 0.35);
+}
+
 /* Glass panels — company brand */
 .glass-panel {
   position: relative;
@@ -210,10 +222,22 @@ a {
   box-shadow: 0 12px 40px rgba(199, 106, 22, 0.22);
 }
 
+.btn-geo {
+  background: linear-gradient(135deg, var(--geo-bright), var(--geo));
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(255, 60, 80, 0.22);
+}
+
 .badge-finance {
   background: var(--orange-dim);
   color: var(--orange-bright);
   border: 1px solid rgba(199, 106, 22, 0.35);
+}
+
+.badge-geo {
+  background: var(--geo-dim);
+  color: var(--geo-bright);
+  border: 1px solid rgba(255, 60, 80, 0.35);
 }
 
 .product-card-finance {
@@ -223,8 +247,19 @@ a {
     var(--bg-card);
 }
 
+.product-card-geo {
+  border-color: rgba(255, 60, 80, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 60, 80, 0.08), rgba(255, 255, 255, 0.015)),
+    var(--bg-card);
+}
+
 .feature-list-finance li::before {
   background: var(--orange);
+}
+
+.feature-list-geo li::before {
+  background: var(--geo);
 }
 
 .network-strip {
@@ -276,6 +311,10 @@ a {
   border-color: rgba(199, 106, 22, 0.35);
 }
 
+.network-card-geo:hover {
+  border-color: rgba(255, 60, 80, 0.35);
+}
+
 .network-card strong {
   font-size: 1.05rem;
   color: var(--text);
@@ -308,8 +347,8 @@ a {
 }
 
 .network-tag-geo {
-  background: rgba(255, 60, 80, 0.12);
-  color: #ff6b7a;
+  background: var(--geo-dim);
+  color: var(--geo-bright);
 }
 
 .hero-logo-wrap.glass-panel {
@@ -506,6 +545,11 @@ a {
   border-radius: 999px;
   background: var(--green);
   box-shadow: 0 0 10px var(--green);
+}
+
+.pill-dot-geo {
+  background: var(--geo);
+  box-shadow: 0 0 10px var(--geo);
 }
 
 .section {

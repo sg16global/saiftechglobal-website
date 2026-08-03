@@ -1,0 +1,28 @@
+---
+description: Never break mobile viewport, breakpoints, or safe-area layout
+alwaysApply: true
+---
+
+# Mobile layout lock
+
+Do **not** change mobile sizing, viewport setup, or responsive breakpoints unless the user explicitly asks.
+
+## Locked (no edits without approval)
+
+- `viewport` meta tag (`width=device-width`, keep `viewport-fit=cover` where present)
+- Full-screen heights: use `100dvh`, not `100vh`, on app shells
+- `env(safe-area-inset-*)` on headers, footers, fixed UI, and PWA overlays
+- Existing `@media` breakpoints — do not rename, remove, or shift them
+- **saifglobal16.info**: geo map mobile layout and visual design stay locked
+
+## When adding UI
+
+- Match the project's existing mobile patterns
+- Use `flex-wrap` / stacked layouts; never squeeze desktop nav onto small screens
+- Fixed bars must respect safe-area; no horizontal overflow at ~375px width
+
+## This project (saiftechglobal.com)
+
+- Breakpoints: mobile default → `768px` nav/grid → `1024px` products → `1200px` four-column products
+- Mobile menu (`#mobile-nav`) stays; desktop `.site-nav` hidden below 768px
+- Do not change `hero-actions` wrap behavior or remove mobile-only nav links
