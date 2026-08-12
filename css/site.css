@@ -307,6 +307,19 @@ a {
   margin: 0 auto;
 }
 
+.sovereign-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  max-width: 920px;
+}
+
+.sovereign-badge {
+  width: min(100%, 320px);
+  height: auto;
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55));
+}
+
 .sovereign-card {
   padding: 1.25rem 1.35rem;
   border-color: rgba(124, 252, 0, 0.16);
