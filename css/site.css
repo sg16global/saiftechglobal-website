@@ -273,6 +273,96 @@ a {
   background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(199, 106, 22, 0.06), transparent 55%);
 }
 
+.sovereign-strip {
+  padding: 2.75rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 0%, rgba(124, 252, 0, 0.08), transparent 58%),
+    linear-gradient(180deg, rgba(8, 12, 8, 0.55), transparent);
+}
+
+.sovereign-head {
+  text-align: center;
+  max-width: 52rem;
+  margin: 0 auto 1.75rem;
+}
+
+.sovereign-head h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.sovereign-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.sovereign-grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.sovereign-card {
+  padding: 1.25rem 1.35rem;
+  border-color: rgba(124, 252, 0, 0.16);
+}
+
+.sovereign-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+  color: var(--green);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sovereign-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sovereign-foot {
+  margin: 1.35rem 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.sovereign-foot a {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.sovereign-foot a:hover {
+  text-decoration: underline;
+}
+
+.pill-sovereign {
+  border-color: rgba(124, 252, 0, 0.28);
+  background: rgba(124, 252, 0, 0.06);
+  color: var(--green);
+}
+
+.footer-sovereign {
+  margin-top: 0.65rem !important;
+  font-size: 0.78rem !important;
+  line-height: 1.45;
+}
+
+.footer-sovereign a {
+  color: var(--green);
+}
+
+.footer-sovereign a:hover {
+  text-decoration: underline;
+}
+
 .network-head {
   margin-bottom: 1.25rem;
 }
@@ -831,6 +921,10 @@ a {
   }
 
   .network-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sovereign-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
