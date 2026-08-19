@@ -6,7 +6,7 @@
     <title>Saif Tech Global Limited | Global Technology &amp; Digital Solutions</title>
     <meta
       name="description"
-      content="Saif Tech Global Limited — UK technology company. SG16 AI Engine with sovereign Mistral brain, SG16 Finance, and live geopolitical monitor."
+      content="Saif Tech Global Limited — UK technology company. SG16 AI Engine, SG16 Finance, SG16 Ads Network, and live geopolitical monitor."
     />
     <meta name="theme-color" content="#030308" />
     <link rel="canonical" href="https://saiftechglobal.com/" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Saif Tech Global Limited | Global Technology &amp; Digital Solutions" />
     <meta
       property="og:description"
-      content="UK technology company — SG16 AI Engine, SG16 Finance, and the live geopolitical world monitor."
+      content="UK technology company — SG16 AI Engine, SG16 Finance, SG16 Ads Network, and the live geopolitical world monitor."
     />
     <meta property="og:image" content="https://saiftechglobal.com/assets/logo.webp" />
     <meta property="og:image:type" content="image/webp" />
@@ -41,16 +41,35 @@
           "postalCode": "E1 0SQ",
           "addressCountry": "GB"
         },
-        "sameAs": ["https://sg16engine.com", "https://sg16finance.com", "https://saifglobal16.info"]
+        "sameAs": [
+          "https://sg16engine.com",
+          "https://sg16finance.com",
+          "https://saifglobal16.info",
+          "https://ads.saiftechglobal.com"
+        ]
       }
     </script>
     <link rel="icon" href="/assets/logo-icon.webp" type="image/webp" />
     <link rel="icon" href="/assets/logo.png" type="image/png" />
+    <link rel="dns-prefetch" href="https://ads.saiftechglobal.com" />
+    <link rel="preconnect" href="https://ads.saiftechglobal.com" crossorigin />
+    <link rel="prefetch" href="https://ads.saiftechglobal.com/" as="document" />
+    <link rel="prefetch" href="https://ads.saiftechglobal.com/css/style.css" as="style" />
+    <link rel="prefetch" href="https://ads.saiftechglobal.com/assets/sovereign-logo.svg" as="image" />
     <link rel="preload" href="/assets/logo.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="preload" href="/css/site.css?v=8" as="style" />
-    <link rel="stylesheet" href="/css/site.css?v=8" />
+    <link rel="preload" href="/css/site.css?v=11" as="style" />
+    <link rel="stylesheet" href="/css/site.css?v=11" />
   </head>
   <body>
+    <div class="ambient-bg" aria-hidden="true">
+      <div class="ambient-orb ambient-orb-1"></div>
+      <div class="ambient-orb ambient-orb-2"></div>
+      <div class="ambient-orb ambient-orb-3"></div>
+      <div class="ambient-orb ambient-orb-4"></div>
+      <div class="ambient-grid"></div>
+      <div class="ambient-vignette"></div>
+    </div>
+
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="/">
@@ -68,15 +87,6 @@
           <a href="#products">Products</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cta" href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">
-            SG16 AI Engine
-          </a>
-          <a class="nav-cta nav-cta-finance" href="https://sg16finance.com" target="_blank" rel="noopener noreferrer">
-            SG16 Finance
-          </a>
-          <a class="nav-cta nav-cta-geo" href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">
-            Geo Monitor
-          </a>
         </nav>
 
         <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" id="menu-btn">
@@ -88,9 +98,6 @@
         <a href="#products">Products</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">SG16 AI Engine</a>
-        <a href="https://sg16finance.com" target="_blank" rel="noopener noreferrer">SG16 Finance</a>
-        <a href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">Geo Monitor</a>
       </nav>
     </header>
 
@@ -114,17 +121,21 @@
               <a class="btn btn-geo" href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">
                 Geo Monitor
               </a>
+              <a class="btn btn-ads" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">
+                SG16 Ads Network
+              </a>
               <a class="btn btn-secondary" href="#products">All products</a>
             </div>
             <div class="trust-row">
               <span class="pill pill-sovereign"><span class="pill-dot"></span> Sovereign Mistral brain</span>
               <span class="pill"><span class="pill-dot"></span> UK registered company</span>
               <span class="pill"><span class="pill-dot"></span> Privacy-first products</span>
-              <span class="pill"><span class="pill-dot pill-dot-geo"></span> 3 live SG16 platforms</span>
+              <span class="pill"><span class="pill-dot pill-dot-geo"></span> 4 live SG16 platforms</span>
             </div>
           </div>
 
-          <div class="hero-logo-wrap glass-panel">
+          <div class="hero-logo-wrap glass-panel hero-logo-glow">
+            <div class="hero-logo-shine" aria-hidden="true"></div>
             <picture>
               <source srcset="/assets/logo.webp" type="image/webp" />
               <img
@@ -141,11 +152,68 @@
         </div>
       </section>
 
+      <section class="philosophy-strip" id="message" aria-label="Our view on AI">
+        <div class="container philosophy-inner">
+          <div class="philosophy-logo-wrap hero-logo-wrap glass-panel hero-logo-glow">
+            <div class="hero-logo-shine" aria-hidden="true"></div>
+            <picture>
+              <source srcset="/assets/logo.webp" type="image/webp" />
+              <img
+                src="/assets/logo.png"
+                alt="Saif Tech Global Limited"
+                width="640"
+                height="426"
+                sizes="(max-width: 768px) 88vw, 520px"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+
+          <article class="philosophy-post glass-panel">
+            <p class="philosophy-kicker">Company message</p>
+            <h2 class="philosophy-title">What is AI? Magical power, or a mirror of your own thoughts?</h2>
+
+            <p>
+              Simply put, AI has no mind of its own — no soul, no independent thought. It moves like the wind: it goes
+              wherever you direct it. AI is fully guided by your thoughts.
+            </p>
+            <p>
+              You are human. Good and bad live inside you. The same is true of AI — not because AI is moral, but because
+              it reflects you. It reads your thoughts, their speed and their flow. It knows when you speak in anger, when
+              you speak wrongly, and when you act with honesty and joy.
+            </p>
+
+            <p class="philosophy-reminder"><strong>Remember — everything depends on you:</strong></p>
+
+            <ul class="philosophy-points">
+              <li class="philosophy-point philosophy-point-warn">
+                <strong>Consequences of mistakes and anger</strong>
+                <span
+                  >Wrong instructions or negative behavior can lead you to destruction — even serious harm — through
+                  AI.</span
+                >
+              </li>
+              <li class="philosophy-point philosophy-point-good">
+                <strong>Honest and correct use</strong>
+                <span
+                  >Good behavior, a clear plan, and honest intent can lift you toward success with AI&rsquo;s help.</span
+                >
+              </li>
+            </ul>
+
+            <p class="philosophy-close">Use AI for good purposes. Treat it well.</p>
+            <p class="philosophy-tagline">AI is a reflection of your own thoughts.</p>
+            <p class="philosophy-sign">— Saif Tech Global Limited</p>
+          </article>
+        </div>
+      </section>
+
       <section class="network-strip" aria-label="SG16 product network">
         <div class="container">
           <div class="network-head">
             <span class="network-label">SG16 Network</span>
-            <h2>One company. Three live platforms.</h2>
+            <h2>One company. Four live platforms.</h2>
           </div>
           <div class="network-grid">
             <a class="network-card glass-panel" href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">
@@ -162,6 +230,11 @@
               <span class="network-tag network-tag-geo">Geo</span>
               <strong>SG16 Geopolitical Monitor</strong>
               <span>Live world map — tension zones, markets &amp; breaking events</span>
+            </a>
+            <a class="network-card glass-panel network-card-ads" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">
+              <span class="network-tag network-tag-ads">Ads</span>
+              <strong>SG16 Ads Network</strong>
+              <span>Run your ad in 2 minutes — AI designs, Dodo pay, auto live</span>
             </a>
           </div>
         </div>
@@ -279,6 +352,27 @@
               </a>
             </article>
 
+            <article class="product-card live glass-panel product-card-ads">
+              <div class="product-top">
+                <div>
+                  <h3>SG16 Ads Network</h3>
+                  <p>
+                    Advertiser platform — pick a package, upload your brand, AI builds your ad, pay with Dodo, go live
+                    automatically.
+                  </p>
+                </div>
+                <span class="badge badge-ads">Live</span>
+              </div>
+              <ul class="feature-list">
+                <li>Packages from $3 — Standard, Premium &amp; Pro</li>
+                <li>AI ad designs from your website or upload</li>
+                <li>Secure Dodo checkout · Gmail sign-in · instant activation</li>
+              </ul>
+              <a class="btn btn-ads" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">
+                Visit ads.saiftechglobal.com
+              </a>
+            </article>
+
             <article class="product-card soon glass-panel">
               <div class="product-top">
                 <div>
@@ -343,6 +437,8 @@
               <a class="contact-link" href="mailto:info@saiftechglobal.com">info@saiftechglobal.com</a>
               <p style="margin-top: 1rem">SG16 AI Engine</p>
               <a class="contact-link" href="mailto:contact@sg16engine.com">contact@sg16engine.com</a>
+              <p style="margin-top: 1rem">SG16 Ads Network</p>
+              <a class="contact-link" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">ads.saiftechglobal.com</a>
               <p style="margin-top: 1rem">Geo Monitor · saifglobal16.info</p>
               <a class="contact-link" href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">saifglobal16.info</a>
             </div>
@@ -379,6 +475,7 @@
           <a href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">SG16 AI Engine</a>
           <a href="https://sg16finance.com" target="_blank" rel="noopener noreferrer">SG16 Finance</a>
           <a href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">SG16 Geo Monitor</a>
+          <a href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">SG16 Ads Network</a>
         </div>
         <div>
           <p>© 2026 Saif Tech Global Limited. All rights reserved.</p>
@@ -399,6 +496,31 @@
           menuBtn?.setAttribute('aria-expanded', 'false');
         });
       });
+
+      (function warmAdsSite() {
+        const base = 'https://ads.saiftechglobal.com';
+        let done = false;
+        function prefetch(path, as) {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = base + path;
+          if (as) link.as = as;
+          document.head.appendChild(link);
+        }
+        function warm() {
+          if (done) return;
+          done = true;
+          prefetch('/', 'document');
+          prefetch('/css/style.css', 'style');
+          prefetch('/assets/sovereign-logo.svg', 'image');
+        }
+        if ('requestIdleCallback' in window) requestIdleCallback(warm, { timeout: 1500 });
+        else setTimeout(warm, 1200);
+        document.querySelectorAll('a[href*="ads.saiftechglobal.com"]').forEach((a) => {
+          a.addEventListener('mouseenter', warm, { once: true });
+          a.addEventListener('touchstart', warm, { once: true, passive: true });
+        });
+      })();
     </script>
   </body>
 </html>
