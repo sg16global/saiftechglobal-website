@@ -1093,6 +1093,11 @@ a {
   box-shadow: 0 0 10px var(--geo);
 }
 
+.pill-dot-warn {
+  background: var(--orange-bright);
+  box-shadow: 0 0 10px var(--orange-bright);
+}
+
 .section {
   padding: 4.5rem 0;
   position: relative;

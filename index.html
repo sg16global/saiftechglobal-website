@@ -53,7 +53,9 @@
     <link rel="icon" href="/assets/logo-icon.webp" type="image/webp" />
     <link rel="icon" href="/assets/logo.png" type="image/png" />
     <link rel="dns-prefetch" href="https://ads.saiftechglobal.com" />
+    <link rel="dns-prefetch" href="https://api.mistralbrain.com" />
     <link rel="preconnect" href="https://ads.saiftechglobal.com" crossorigin />
+    <link rel="preconnect" href="https://api.mistralbrain.com" crossorigin />
     <link rel="prefetch" href="https://ads.saiftechglobal.com/" as="document" />
     <link rel="prefetch" href="https://ads.saiftechglobal.com/css/style.css" as="style" />
     <link rel="prefetch" href="https://ads.saiftechglobal.com/assets/sovereign-logo.svg" as="image" />
@@ -131,7 +133,7 @@
               <a class="btn btn-secondary" href="#products">All products</a>
             </div>
             <div class="trust-row">
-              <span class="pill pill-sovereign"><span class="pill-dot"></span> Sovereign Mistral brain</span>
+              <span class="pill pill-sovereign" id="brain-status-pill"><span class="pill-dot"></span> SG16 Mistral X · checking…</span>
               <span class="pill"><span class="pill-dot"></span> UK registered company</span>
               <span class="pill"><span class="pill-dot"></span> Privacy-first products</span>
               <span class="pill"><span class="pill-dot pill-dot-geo"></span> 5 live SG16 platforms</span>
@@ -239,14 +241,14 @@
             <span class="network-label">SG16 AI Engine</span>
             <h2>Own brain. Not a rented AI wrapper.</h2>
             <p>
-              SG16 AI Engine runs on a self-hosted sovereign stack — Mistral 7B Instruct under Apache 2.0 — operated by
-              Saif Tech Global on our infrastructure.
+              SG16 AI Engine runs on a sovereign cloud brain — SG16 Mistral X at api.mistralbrain.com — operated 24/7 by
+              Saif Tech Global on Cloudflare infrastructure.
             </p>
           </div>
           <div class="sovereign-badge-wrap">
             <img
               src="/assets/sovereign-sg16-brain-badge.png"
-              alt="Sovereign SG16 Brain — Mistral 7B Instruct, Apache 2.0"
+              alt="Sovereign SG16 Brain — SG16 Mistral X, Cloudflare Workers AI"
               class="sovereign-badge"
               width="420"
               height="420"
@@ -257,7 +259,7 @@
           <div class="sovereign-grid">
             <article class="sovereign-card glass-panel">
               <h3>Sovereign brain</h3>
-              <p>Mistral 7B Instruct (Apache 2.0) on SG16-owned servers — central gateway for every shield and project.</p>
+              <p>SG16 Mistral X on api.mistralbrain.com — central DOOR gateway for every shield and SG16 project.</p>
             </article>
             <article class="sovereign-card glass-panel">
               <h3>SG16 Secure Room</h3>
@@ -271,7 +273,9 @@
           <p class="sovereign-foot">
             <a href="https://sg16engine.com/license" target="_blank" rel="noopener noreferrer">License &amp; sovereign brain policy</a>
             ·
-            <a href="https://sg16engine.com/health" target="_blank" rel="noopener noreferrer">Live brain status</a>
+            <a href="https://api.mistralbrain.com/api/v1/ping" target="_blank" rel="noopener noreferrer">Cloud brain ping</a>
+            ·
+            <a href="https://sg16engine.com/health" target="_blank" rel="noopener noreferrer">Engine health</a>
           </p>
         </div>
       </section>
@@ -293,7 +297,7 @@
                 <span class="badge badge-live">Live</span>
               </div>
               <ul class="feature-list">
-                <li>Sovereign Mistral 7B brain (Apache 2.0) — self-hosted SG16 stack</li>
+                <li>SG16 Mistral X cloud brain — api.mistralbrain.com, 24/7 sovereign stack</li>
                 <li>Five shields — Coding Hub, Health, Student, Market, AI Chat</li>
                 <li>Zero-Data Trace policy — chat processed live, not stored on servers</li>
                 <li>Google sign-in · Coding Shield + Platform Shield security tools</li>
@@ -477,7 +481,7 @@
           <p><strong style="color: var(--text)">Saif Tech Global Limited</strong></p>
           <p>Global Technology &amp; Digital Solutions Company</p>
           <p class="footer-sovereign">
-            SG16 AI Engine · Sovereign Mistral brain · Apache 2.0 ·
+            SG16 AI Engine · SG16 Mistral X · api.mistralbrain.com ·
             <a href="https://sg16engine.com/license" target="_blank" rel="noopener noreferrer">Zero-Data policy</a>
           </p>
         </div>
@@ -536,6 +540,23 @@
           a.addEventListener('mouseenter', warm, { once: true });
           a.addEventListener('touchstart', warm, { once: true, passive: true });
         });
+      })();
+
+      (function brainStatus() {
+        const pill = document.getElementById('brain-status-pill');
+        if (!pill) return;
+        fetch('https://api.mistralbrain.com/api/v1/ping', { credentials: 'omit' })
+          .then((r) => (r.ok ? r.json() : Promise.reject(new Error('offline'))))
+          .then((data) => {
+            if (data.status === 'ok') {
+              pill.innerHTML = '<span class="pill-dot"></span> SG16 Mistral X · live 24/7';
+            } else {
+              pill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
+            }
+          })
+          .catch(() => {
+            pill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
+          });
       })();
     </script>
   </body>
