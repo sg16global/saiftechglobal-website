@@ -647,7 +647,7 @@ a {
 }
 
 .sovereign-badge {
-  width: min(100%, 320px);
+  width: min(100%, 420px);
   height: auto;
   filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 40px rgba(124, 252, 0, 0.15));
 }
