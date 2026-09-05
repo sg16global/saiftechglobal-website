@@ -1233,6 +1233,19 @@ a {
   gap: 1.25rem;
 }
 
+.about-brand {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.about-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
 .info-card {
   padding: 1.5rem;
   border-radius: var(--radius);
