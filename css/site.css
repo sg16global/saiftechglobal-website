@@ -1127,6 +1127,27 @@ a {
   max-width: 42rem;
 }
 
+.section-head-center {
+  text-align: center;
+}
+
+.section-head-center p {
+  margin-inline: auto;
+}
+
+.section-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+.section-about {
+  padding-top: 5rem;
+}
+
 .product-grid {
   display: grid;
   gap: 1.25rem;
@@ -1227,6 +1248,12 @@ a {
   background: var(--green);
 }
 
+.about-brand-showcase {
+  width: min(1360px, calc(100vw - 1rem));
+  margin: 0 auto 2.75rem;
+  padding-inline: max(0.5rem, env(safe-area-inset-left)) max(0.5rem, env(safe-area-inset-right));
+}
+
 .about-grid,
 .contact-grid {
   display: grid;
@@ -1234,9 +1261,20 @@ a {
 }
 
 .about-brand {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
   overflow: hidden;
   padding: 0;
+  border-radius: 22px;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  box-shadow:
+    0 32px 100px rgba(0, 0, 0, 0.72),
+    0 0 70px rgba(124, 252, 0, 0.1),
+    0 0 48px rgba(212, 175, 55, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.about-brand.glass-panel::before {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
 }
 
 .about-brand img {
@@ -1434,6 +1472,14 @@ a {
 @media (min-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .about-brand-showcase {
+    width: min(1480px, 92vw);
+  }
+
+  .section-about .section-head h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
   }
 }
 
