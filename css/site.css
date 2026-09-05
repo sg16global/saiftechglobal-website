@@ -1145,7 +1145,31 @@ a {
 }
 
 .section-about {
-  padding-top: 5rem;
+  /* keeps LLC kicker styling without extra size */
+}
+
+.about-brand {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.55),
+    0 0 28px rgba(212, 175, 55, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.about-brand.glass-panel::before {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.32), transparent);
+}
+
+.about-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
 }
 
 .product-grid {
@@ -1248,40 +1272,10 @@ a {
   background: var(--green);
 }
 
-.about-brand-showcase {
-  width: min(1360px, calc(100vw - 1rem));
-  margin: 0 auto 2.75rem;
-  padding-inline: max(0.5rem, env(safe-area-inset-left)) max(0.5rem, env(safe-area-inset-right));
-}
-
 .about-grid,
 .contact-grid {
   display: grid;
   gap: 1.25rem;
-}
-
-.about-brand {
-  margin-bottom: 0;
-  overflow: hidden;
-  padding: 0;
-  border-radius: 22px;
-  border: 2px solid rgba(212, 175, 55, 0.5);
-  box-shadow:
-    0 32px 100px rgba(0, 0, 0, 0.72),
-    0 0 70px rgba(124, 252, 0, 0.1),
-    0 0 48px rgba(212, 175, 55, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-}
-
-.about-brand.glass-panel::before {
-  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
-}
-
-.about-brand img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: inherit;
 }
 
 .info-card {
@@ -1472,14 +1466,6 @@ a {
 @media (min-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .about-brand-showcase {
-    width: min(1480px, 92vw);
-  }
-
-  .section-about .section-head h2 {
-    font-size: clamp(2rem, 3.5vw, 2.75rem);
   }
 }
 
