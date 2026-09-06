@@ -1,8 +1,8 @@
-/*
-  Cloudflare Pages headers (this folder = public web root).
-  Cache HTML briefly at edge; long-cache fonts/assets.
-  Link preloads help when Early Hints is enabled on the zone.
-*/
+# Cloudflare Pages headers (this folder = public web root).
+# Cache HTML briefly at edge; long-cache fonts/assets.
+# Link preloads help when Early Hints is enabled on the zone.
+# Comments must use "#": a /* ... */ block is parsed as a path pattern plus
+# header lines, not a comment.
 /
   Cache-Control: public, max-age=300, s-maxage=3600
   Link: </assets/logo-llc.jpg>; rel=preload; as=image; type=image/jpeg, </css/site.css?v=17>; rel=preload; as=style
