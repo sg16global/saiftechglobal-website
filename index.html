@@ -69,8 +69,8 @@
     <link rel="prefetch" href="https://ads.saiftechglobal.com/css/style.css" as="style" />
     <link rel="prefetch" href="https://ads.saiftechglobal.com/assets/sovereign-logo.svg" as="image" />
     <link rel="preload" href="/assets/logo-llc.jpg?v=1" as="image" type="image/jpeg" fetchpriority="high" />
-    <link rel="preload" href="/css/site.css?v=17" as="style" />
-    <link rel="stylesheet" href="/css/site.css?v=17" />
+    <link rel="preload" href="/css/site.css?v=18" as="style" />
+    <link rel="stylesheet" href="/css/site.css?v=18" />
   </head>
   <body>
     <div class="ambient-bg" aria-hidden="true">
@@ -147,9 +147,9 @@
             </div>
             <div class="trust-row">
               <span class="pill pill-sovereign" id="brain-status-pill"><span class="pill-dot"></span> SG16 Mistral X · checking…</span>
+              <span class="pill" id="network-status-pill"><span class="pill-dot pill-dot-warn"></span> Platforms · checking…</span>
               <span class="pill"><span class="pill-dot"></span> USA registered company</span>
               <span class="pill"><span class="pill-dot"></span> Privacy-first products</span>
-              <span class="pill"><span class="pill-dot pill-dot-geo"></span> 5 live SG16 platforms</span>
             </div>
           </div>
 
@@ -214,29 +214,30 @@
           <div class="network-head">
             <span class="network-label">SG16 Network</span>
             <h2>One company. Five live platforms.</h2>
+            <p class="network-live" id="network-live">Checking live APIs…</p>
           </div>
           <div class="network-grid">
-            <a class="network-card glass-panel" href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">
+            <a class="network-card glass-panel" data-platform="engine" href="https://sg16engine.com" target="_blank" rel="noopener noreferrer">
               <span class="network-tag network-tag-ai">AI</span>
               <strong>SG16 AI Engine</strong>
               <span>Multi-workspace AI for chat, code, docs &amp; images — sovereign Mistral brain</span>
             </a>
-            <a class="network-card glass-panel network-card-finance" href="https://sg16finance.com" target="_blank" rel="noopener noreferrer">
+            <a class="network-card glass-panel network-card-finance" data-platform="finance" href="https://sg16finance.com" target="_blank" rel="noopener noreferrer">
               <span class="network-tag network-tag-finance">Finance</span>
               <strong>SG16 Finance</strong>
               <span>Global markets, sectors &amp; earnings intelligence</span>
             </a>
-            <a class="network-card glass-panel network-card-children" href="https://sg16children.com" target="_blank" rel="noopener noreferrer">
+            <a class="network-card glass-panel network-card-children" data-platform="children" href="https://sg16children.com" target="_blank" rel="noopener noreferrer">
               <span class="network-tag network-tag-children">Kids</span>
               <strong>SG16 Children World</strong>
               <span>Parent-gated learning chat with Robo — ages 6–11 &amp; up</span>
             </a>
-            <a class="network-card glass-panel network-card-geo" href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">
+            <a class="network-card glass-panel network-card-geo" data-platform="geo" href="https://saifglobal16.info" target="_blank" rel="noopener noreferrer">
               <span class="network-tag network-tag-geo">Geo</span>
               <strong>SG16 Geopolitical Monitor</strong>
               <span>Live world map — tension zones, markets &amp; breaking events</span>
             </a>
-            <a class="network-card glass-panel network-card-ads" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">
+            <a class="network-card glass-panel network-card-ads" data-platform="ads" href="https://ads.saiftechglobal.com" target="_blank" rel="noopener noreferrer">
               <span class="network-tag network-tag-ads">Ads</span>
               <strong>SG16 Ads Network</strong>
               <span>Run your ad in 2 minutes — AI designs, Dodo pay, auto live</span>
@@ -298,13 +299,13 @@
           </div>
 
           <div class="product-grid">
-            <article class="product-card live glass-panel">
+            <article class="product-card live glass-panel" data-platform="engine">
               <div class="product-top">
                 <div>
                   <h3>SG16 AI Engine</h3>
                   <p>Multi-workspace AI platform for chat, coding, documents, images, and more.</p>
                 </div>
-                <span class="badge badge-live">Live</span>
+                <span class="badge badge-live" data-live-badge>Checking</span>
               </div>
               <ul class="feature-list">
                 <li>SG16 Mistral X cloud brain — api.mistralbrain.com, 24/7 sovereign stack</li>
@@ -317,7 +318,7 @@
               </a>
             </article>
 
-            <article class="product-card live glass-panel product-card-finance">
+            <article class="product-card live glass-panel product-card-finance" data-platform="finance">
               <div class="product-top">
                 <div>
                   <h3>SG16 Finance</h3>
@@ -326,7 +327,7 @@
                     earnings breakdowns.
                   </p>
                 </div>
-                <span class="badge badge-finance">Live</span>
+                <span class="badge badge-finance" data-live-badge>Checking</span>
               </div>
               <ul class="feature-list feature-list-finance">
                 <li>Live dashboard with world market map &amp; tickers</li>
@@ -338,7 +339,7 @@
               </a>
             </article>
 
-            <article class="product-card live glass-panel product-card-children">
+            <article class="product-card live glass-panel product-card-children" data-platform="children">
               <div class="product-top">
                 <div>
                   <h3>SG16 Children World</h3>
@@ -346,7 +347,7 @@
                     Parent-gated learning world for kids and families — chat with Robo, the friendly AI helper.
                   </p>
                 </div>
-                <span class="badge badge-children">Live</span>
+                <span class="badge badge-children" data-live-badge>Checking</span>
               </div>
               <ul class="feature-list feature-list-children">
                 <li>Robo assistant for ages 6–11, teens &amp; adults — tiered safety</li>
@@ -358,7 +359,7 @@
               </a>
             </article>
 
-            <article class="product-card live glass-panel product-card-geo">
+            <article class="product-card live glass-panel product-card-geo" data-platform="geo">
               <div class="product-top">
                 <div>
                   <h3>SG16 Geopolitical Monitor</h3>
@@ -367,7 +368,7 @@
                     updates in one view.
                   </p>
                 </div>
-                <span class="badge badge-geo">Live</span>
+                <span class="badge badge-geo" data-live-badge>Checking</span>
               </div>
               <ul class="feature-list feature-list-geo">
                 <li>Deep black · red neon live map with tension zones</li>
@@ -379,7 +380,7 @@
               </a>
             </article>
 
-            <article class="product-card live glass-panel product-card-ads">
+            <article class="product-card live glass-panel product-card-ads" data-platform="ads">
               <div class="product-top">
                 <div>
                   <h3>SG16 Ads Network</h3>
@@ -388,7 +389,7 @@
                     automatically.
                   </p>
                 </div>
-                <span class="badge badge-ads">Live</span>
+                <span class="badge badge-ads" data-live-badge>Checking</span>
               </div>
               <ul class="feature-list">
                 <li>Packages from $3 — Standard, Premium &amp; Pro</li>
@@ -565,20 +566,50 @@
         });
       })();
 
-      (function brainStatus() {
+      (function liveNetworkStatus() {
         const pill = document.getElementById('brain-status-pill');
-        if (!pill) return;
-        fetch('https://api.mistralbrain.com/api/v1/ping', { credentials: 'omit' })
-          .then((r) => (r.ok ? r.json() : Promise.reject(new Error('offline'))))
-          .then((data) => {
-            if (data.status === 'ok') {
-              pill.innerHTML = '<span class="pill-dot"></span> SG16 Mistral X · live 24/7';
-            } else {
-              pill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
-            }
-          })
+        const netPill = document.getElementById('network-status-pill');
+        const liveLine = document.getElementById('network-live');
+
+        function apply(data) {
+          const byId = {};
+          (data.platforms || []).forEach((p) => { byId[p.id] = p; });
+          const brain = byId.brain;
+          if (pill) {
+            pill.innerHTML = brain && brain.ok
+              ? '<span class="pill-dot"></span> SG16 Mistral X · live 24/7'
+              : '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
+          }
+          const productIds = ['engine', 'children', 'finance', 'geo', 'ads'];
+          const liveCount = productIds.filter((id) => byId[id] && byId[id].ok).length;
+          if (netPill) {
+            const warn = liveCount < productIds.length;
+            netPill.innerHTML = '<span class="pill-dot' + (warn ? ' pill-dot-warn' : '') + '"></span> ' +
+              liveCount + '/' + productIds.length + ' platforms live';
+          }
+          if (liveLine) {
+            liveLine.textContent = (data.platforms || [])
+              .filter((p) => p.id !== 'brain')
+              .map((p) => p.label + (p.ok ? ' · live' : ' · down'))
+              .join('   ·   ');
+          }
+          document.querySelectorAll('[data-platform]').forEach((el) => {
+            const id = el.getAttribute('data-platform');
+            const row = byId[id];
+            if (!row) return;
+            el.classList.toggle('is-down', !row.ok);
+            const badge = el.querySelector('[data-live-badge]');
+            if (badge) badge.textContent = row.ok ? 'Live' : 'Down';
+          });
+        }
+
+        fetch('/api/status', { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : Promise.reject(new Error('status'))))
+          .then(apply)
           .catch(() => {
-            pill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
+            if (pill) pill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Brain · check later';
+            if (netPill) netPill.innerHTML = '<span class="pill-dot pill-dot-warn"></span> Platforms · offline';
+            if (liveLine) liveLine.textContent = 'Live status unavailable — sites may still be up.';
           });
       })();
     </script>

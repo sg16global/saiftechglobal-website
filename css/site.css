@@ -782,6 +782,27 @@ a {
     0 0 40px rgba(94, 184, 255, 0.15);
 }
 
+.network-head h2 {
+  margin: 0;
+}
+
+.network-live {
+  margin: 0.65rem 0 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.network-card.is-down,
+.product-card.is-down {
+  outline: 1px solid rgba(255, 80, 80, 0.35);
+}
+
+.product-card.is-down .badge {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ffb4b4;
+}
+
 .network-card strong {
   font-size: 1.05rem;
   color: var(--text);
