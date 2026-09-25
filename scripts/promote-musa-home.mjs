@@ -69,10 +69,16 @@ const redirectHtml = `<!DOCTYPE html>
 `;
 fs.writeFileSync(path.join(musaDir, "index.html"), redirectHtml, "utf8");
 
-fs.writeFileSync(
-  path.join(root, "_redirects"),
-  "/musa-premium\t/\t301\n/musa-premium/\t/\t301\n",
-  "utf8",
-);
+const redirectsPath = path.join(root, "_redirects");
+const redirectRules = `/musa-premium\t/\t301
+/musa-premium/\t/\t301
+/classic\t/404.html\t404
+/classic/\t/404.html\t404
+/classic/*\t/404.html\t404
+/_internal/*\t/404.html\t404
+`;
+if (!fs.existsSync(redirectsPath) || !fs.readFileSync(redirectsPath, "utf8").includes("/_internal/")) {
+  fs.writeFileSync(redirectsPath, redirectRules, "utf8");
+}
 
 console.log("Homepage is now Musa at / (index.html). /musa-premium/ → / redirect added.");
