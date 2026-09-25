@@ -123,11 +123,10 @@ body {
 .rail-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,.04); border-radius: 999px; }
 .rail-scroll::-webkit-scrollbar-thumb { background: linear-gradient(90deg, rgba(255,122,24,.6), rgba(255,165,59,.4)); border: none; }
 
-/* Hero: text left / visual right (matches site 768px breakpoint) */
-@media (min-width: 768px) {
-  .hero-split {
-    grid-template-columns: 1.05fr 0.95fr;
-    align-items: center;
+/* Hero — text left, visual right (1024px+, same as Musa reference) */
+@media (min-width: 1024px) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
   }
 }
 
