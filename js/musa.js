@@ -36,6 +36,38 @@
     el.classList.add("is-visible");
   });
 
+  (function networkRailScroll() {
+    const section = document.getElementById("network");
+    if (!section) return;
+    const rail = section.querySelector(".rail-scroll");
+    const prev = section.querySelector('button[aria-label="Scroll network cards left"]');
+    const next = section.querySelector('button[aria-label="Scroll network cards right"]');
+    const progressFill = section.querySelector(".h-1.overflow-hidden.rounded-full > div");
+    if (!rail || !prev || !next) return;
+
+    function update() {
+      const canLeft = rail.scrollLeft > 8;
+      const canRight = rail.scrollLeft + rail.clientWidth < rail.scrollWidth - 8;
+      prev.disabled = !canLeft;
+      next.disabled = !canRight;
+      const max = rail.scrollWidth - rail.clientWidth;
+      const progress = max > 0 ? rail.scrollLeft / max : 0;
+      if (progressFill) progressFill.style.width = 12 + progress * 88 + "%";
+    }
+
+    function scrollBy(dir) {
+      const step = Math.min(380, rail.clientWidth * 0.8);
+      rail.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+
+    prev.addEventListener("click", () => scrollBy(-1));
+    next.addEventListener("click", () => scrollBy(1));
+    rail.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+    requestAnimationFrame(update);
+  })();
+
   (function warmAdsSite() {
     const base = "https://ads.saiftechglobal.com";
     let done = false;

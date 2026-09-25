@@ -2,39 +2,20 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight, Activity } from "lucide-react";
 import { NAV_LINKS } from "../data/platforms";
 
-function LogoMark({ size = 40 }: { size?: number }) {
+const HEADER_LOGO_SRC = "/assets/saif-tech-global-hero.jpg";
+
+function LogoMark({ size = 44 }: { size?: number }) {
   return (
-    <span
-      className="relative grid shrink-0 place-items-center overflow-hidden rounded-xl"
-      style={{
-        width: size,
-        height: size,
-        background: "linear-gradient(135deg,#1a0d02 0%,#2b1204 40%,#0b0d1a 100%)",
-        border: "1px solid rgba(255,122,24,.35)",
-        boxShadow: "0 0 24px -4px rgba(255,122,24,.55), inset 0 1px 0 rgba(255,255,255,.15)",
-      }}
+    <img
+      src={HEADER_LOGO_SRC}
+      alt=""
+      width={size}
+      height={size}
+      decoding="async"
+      className="shrink-0 rounded-xl border border-orange-400/35 object-cover object-[center_42%] shadow-[0_0_24px_-4px_rgba(255,122,24,.55)]"
+      style={{ width: size, height: size }}
       aria-hidden="true"
-    >
-      <span className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,59,.45),transparent_55%)]" />
-      <svg width={size * 0.62} height={size * 0.62} viewBox="0 0 32 32" fill="none">
-        <path
-          d="M6 20.5 11.5 9.5c1.2-2.4 3-3.5 5.2-3.5 2.7 0 4.9 1.7 5.7 4.3l.5 1.6"
-          stroke="#FFA53B"
-          strokeWidth="2.4"
-          strokeLinecap="round"
-        />
-        <path
-          d="M10 13.5c2.8 0 4.2 1 5.2 2.6l1.1 1.8c1 1.7 2.4 2.6 5.2 2.6"
-          stroke="#FF7A18"
-          strokeWidth="2.4"
-          strokeLinecap="round"
-        />
-        <circle cx="23" cy="20.5" r="3.2" stroke="#fff" strokeWidth="1.8" />
-        <circle cx="23" cy="20.5" r="1" fill="#FFA53B" />
-        <path d="M6 25.5h12" stroke="rgba(255,255,255,.35)" strokeWidth="1.6" strokeLinecap="round" />
-      </svg>
-      <span className="pointer-events-none absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-white/25 to-transparent animate-shine-sweep" />
-    </span>
+    />
   );
 }
 
