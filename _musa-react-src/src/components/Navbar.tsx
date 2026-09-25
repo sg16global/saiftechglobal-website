@@ -4,7 +4,7 @@ import { NAV_LINKS } from "../data/platforms";
 
 const HEADER_LOGO_SRC = "/assets/saif-tech-global-hero.jpg";
 
-function LogoMark({ size = 44 }: { size?: number }) {
+function LogoMark({ size = 38 }: { size?: number }) {
   return (
     <img
       src={HEADER_LOGO_SRC}
