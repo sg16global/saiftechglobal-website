@@ -100,3 +100,5 @@ ${assetizedHtml}
 
 fs.writeFileSync(path.join(outDir, "index.html"), html, "utf8");
 console.log("Wrote musa-premium/index.html + css/musa.css (" + Math.round(html.length / 1024) + " KB HTML)");
+
+await import("./promote-musa-home.mjs");

@@ -39,9 +39,8 @@ Outputs:
 
 ## Deploy on Cloudflare Pages
 
-Same repo deploy as today. Optional paths:
+**Production homepage:** `https://saiftechglobal.com/` (Musa export at repo root `index.html`).
 
-- `/` — existing static site
-- `/musa-premium/` — this export
+After export, `scripts/promote-musa-home.mjs` copies this folder to `/` and redirects `/musa-premium/` → `/`.
 
-To make Musa the homepage later, swap or redirect after you review content (testimonials, etc.).
+Previous static homepage: **`/classic/`** (backup).
