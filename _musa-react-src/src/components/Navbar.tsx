@@ -2,19 +2,20 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight, Activity } from "lucide-react";
 import { NAV_LINKS } from "../data/platforms";
 
-const HEADER_LOGO_SRC = "/assets/saif-tech-global-hero.jpg";
+/** Small header mark — logo-icon loads reliably; hero JPG is for the large hero panel only. */
+const HEADER_LOGO_SRC = "/assets/logo-icon.webp";
 
-function LogoMark({ size = 38 }: { size?: number }) {
+function LogoMark({ size = 40 }: { size?: number }) {
   return (
     <img
       src={HEADER_LOGO_SRC}
-      alt=""
+      alt="Saif Tech Global LLC"
       width={size}
       height={size}
       decoding="async"
-      className="shrink-0 rounded-xl border border-orange-400/35 object-cover object-[center_42%] shadow-[0_0_24px_-4px_rgba(255,122,24,.55)]"
+      loading="eager"
+      className="shrink-0 rounded-xl border border-orange-400/35 bg-[#0b0d1a] object-cover object-center shadow-[0_0_24px_-4px_rgba(255,122,24,.55)]"
       style={{ width: size, height: size }}
-      aria-hidden="true"
     />
   );
 }

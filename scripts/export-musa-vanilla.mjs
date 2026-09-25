@@ -46,7 +46,7 @@ fs.writeFileSync(path.join(outDir, "css", "musa.css"), css, "utf8");
 /** Point prerendered img tags at static files (avoid broken file:// URLs). */
 const assetizedHtml = mainHtml.replace(
   /src="(?:file:\/\/[^"]*\/assets\/|\/assets\/)([^"]+)"/g,
-  'src="assets/$1"',
+  'src="/assets/$1"',
 );
 
 const headMeta = built.match(/<head>([\s\S]*?)<\/head>/i)?.[1] ?? "";
