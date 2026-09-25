@@ -43,4 +43,4 @@ Outputs:
 
 After export, `scripts/promote-musa-home.mjs` copies this folder to `/` and redirects `/musa-premium/` → `/`.
 
-Previous static homepage: **`/classic/`** (backup).
+Previous static homepage is kept in **`_internal/backup/`** (repo only — not linked on the live site).

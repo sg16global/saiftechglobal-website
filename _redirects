@@ -1,2 +1,6 @@
 /musa-premium	/	301
 /musa-premium/	/	301
+/classic	/404.html	404
+/classic/	/404.html	404
+/classic/*	/404.html	404
+/_internal/*	/404.html	404

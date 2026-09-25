@@ -1,6 +1,6 @@
 /**
  * Publishes musa-premium export as https://saiftechglobal.com/ (repo root index.html).
- * Backs up the previous homepage to classic/index.html once.
+ * Backs up the previous homepage to _internal/backup/ (not a public URL).
  */
 import fs from "fs";
 import path from "path";
@@ -15,14 +15,18 @@ if (!fs.existsSync(musaIndex)) {
   process.exit(1);
 }
 
-const classicDir = path.join(root, "classic");
+const backupDir = path.join(root, "_internal", "backup");
 const rootIndex = path.join(root, "index.html");
-const classicIndex = path.join(classicDir, "index.html");
+const backupIndex = path.join(backupDir, "homepage-classic.html");
 
-if (!fs.existsSync(classicIndex) && fs.existsSync(rootIndex)) {
-  fs.mkdirSync(classicDir, { recursive: true });
-  fs.copyFileSync(rootIndex, classicIndex);
-  console.log("Backed up previous homepage → classic/index.html");
+if (fs.existsSync(rootIndex)) {
+  const current = fs.readFileSync(rootIndex, "utf8");
+  const isMusaHome = current.includes("/css/musa.css") || current.includes('href="css/musa.css"');
+  if (!isMusaHome) {
+    fs.mkdirSync(backupDir, { recursive: true });
+    fs.copyFileSync(rootIndex, backupIndex);
+    console.log("Backed up previous homepage → _internal/backup/homepage-classic.html");
+  }
 }
 
 let html = fs.readFileSync(musaIndex, "utf8");
