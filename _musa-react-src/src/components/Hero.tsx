@@ -1,8 +1,8 @@
 import { ArrowDown, ArrowUpRight, ShieldCheck, Building2, Sparkles, Cpu, LayoutGrid } from "lucide-react";
-
-const HERO_BRAND_SRC = "/assets/saif-tech-global-hero.jpg";
 import type { LiveState } from "../hooks/useLiveStatus";
 import { PLATFORMS } from "../data/platforms";
+
+const HERO_BRAND_SRC = "/assets/saif-tech-global-hero.jpg";
 
 function HeroVisual() {
   return (
@@ -19,10 +19,15 @@ function HeroVisual() {
             <i className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
             <i className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
           </span>
-          <span className="mx-auto flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[11px] font-medium text-white/60">
+          <a
+            href="https://mistralbrain.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[11px] font-medium text-white/60 transition hover:border-emerald-400/30 hover:text-white/80"
+          >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse-dot" />
-            saiftechglobal.com
-          </span>
+            mistralbrain.com
+          </a>
           <span className="w-12" />
         </div>
 

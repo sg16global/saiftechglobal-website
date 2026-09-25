@@ -12,17 +12,50 @@ export default function Footer() {
             <a href="#top" className="flex items-center gap-3" aria-label="Back to top — Saif Tech Global LLC">
               <LogoMark size={44} />
               <span className="leading-tight">
-                <strong className="block font-display text-base font-semibold text-white">
+                <strong className="block font-display text-lg font-semibold text-white">
                   Saif Tech Global <span className="text-orange-400">LLC</span>
                 </strong>
-                <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-white/45">
+                <span className="mt-0.5 block text-[10px] font-medium tracking-wide text-white/45">
+                  NM Secretary of State · Reg. No. 0008128993
+                </span>
+                <span className="block text-[9px] font-medium uppercase tracking-[0.16em] text-white/40">
                   USA technology company
                 </span>
               </span>
             </a>
             <p className="mt-4 text-sm text-white/55">Global Technology &amp; Digital Solutions · Albuquerque, NM, USA</p>
+            <figure className="mt-4 max-w-[220px]">
+              <a
+                href="/assets/nm-certificate-of-organization.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)] transition hover:border-orange-400/30"
+              >
+                <img
+                  src="/assets/nm-certificate-of-organization.jpg"
+                  width={440}
+                  height={568}
+                  alt="New Mexico Certificate of Organization — Saif Tech Global LLC, registration 0008128993"
+                  className="h-auto w-full"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <figcaption className="mt-2 text-[10px] leading-snug text-white/40">
+                Certificate of Organization · State of New Mexico · effective September 10, 2026
+              </figcaption>
+            </figure>
             <p className="mt-3 text-[13px] leading-relaxed text-white/40">
-              SG16 AI Engine · SG16 Mistral X · api.mistralbrain.com ·{" "}
+              SG16 Brain · SG16 Mistral X ·{" "}
+              <a
+                href="https://mistralbrain.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-orange-300/90 underline decoration-orange-400/30 underline-offset-4 hover:text-orange-200"
+              >
+                mistralbrain.com
+              </a>{" "}
+              · api.mistralbrain.com ·{" "}
               <a
                 href="https://sg16engine.com/license"
                 target="_blank"

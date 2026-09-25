@@ -73,10 +73,10 @@ export default function Navbar({ liveCount, total }: { liveCount: number; total:
           <a href="#top" className="group flex min-w-0 items-center gap-3" aria-label="Saif Tech Global LLC — home">
             <LogoMark />
             <span className="min-w-0 leading-tight">
-              <strong className="block truncate font-display text-[15px] font-semibold tracking-tight text-white sm:text-base">
+              <strong className="block truncate font-display text-base font-semibold tracking-tight text-white sm:text-lg">
                 Saif Tech Global <span className="text-luxury-400">LLC</span>
               </strong>
-              <span className="block truncate text-[11px] font-medium uppercase tracking-[0.18em] text-white/50">
+              <span className="block truncate text-[9px] font-medium uppercase tracking-[0.16em] text-white/45 sm:text-[10px]">
                 USA technology company
               </span>
             </span>
@@ -105,12 +105,12 @@ export default function Navbar({ liveCount, total }: { liveCount: number; total:
               {liveCount}/{total} live
             </span>
             <a
-              href="https://sg16engine.com"
+              href="https://mistralbrain.com"
               target="_blank"
               rel="noopener noreferrer"
               className="group hidden items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] px-4 py-2.5 text-sm font-semibold text-[#1a0b00] shadow-[0_8px_30px_-8px_rgba(255,122,24,0.7)] transition-all duration-300 hover:shadow-[0_8px_40px_-6px_rgba(255,122,24,0.9)] hover:brightness-110 sm:inline-flex"
             >
-              SG16 AI Engine
+              SG16 Brain
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <button
@@ -148,12 +148,12 @@ export default function Navbar({ liveCount, total }: { liveCount: number; total:
             </a>
           ))}
           <a
-            href="https://sg16engine.com"
+            href="https://mistralbrain.com"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] px-4 py-3 text-sm font-bold text-[#1a0b00]"
           >
-            SG16 AI Engine <ArrowUpRight className="h-4 w-4" />
+            SG16 Brain <ArrowUpRight className="h-4 w-4" />
           </a>
         </nav>
       </div>

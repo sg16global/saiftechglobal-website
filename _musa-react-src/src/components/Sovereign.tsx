@@ -41,8 +41,18 @@ function SovereignBadge() {
         <p className="mt-5 text-[11px] font-bold uppercase tracking-[0.28em] text-orange-300">Sovereign SG16 Brain</p>
         <p className="mt-2 font-display text-2xl font-bold tracking-tight text-white">Mistral X</p>
         <p className="mt-1 text-xs font-medium text-white/50">Instruct · Apache 2.0</p>
-        <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-4 py-1.5 font-mono text-xs text-orange-200">
-          api.mistralbrain.com
+        <p className="mx-auto mt-4 flex flex-wrap items-center justify-center gap-2">
+          <a
+            href="https://mistralbrain.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-4 py-1.5 font-mono text-xs text-orange-200 transition hover:border-orange-400/40 hover:text-orange-100"
+          >
+            mistralbrain.com
+          </a>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-4 py-1.5 font-mono text-xs text-orange-200/90">
+            api.mistralbrain.com
+          </span>
         </p>
         <div className="mt-4 flex items-center justify-center gap-2 text-[11px] font-semibold text-emerald-200">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> OPERATIONAL · 24/7
