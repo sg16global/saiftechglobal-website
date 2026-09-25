@@ -6,7 +6,7 @@ const HERO_BRAND_SRC = "/assets/saif-tech-global-hero.jpg";
 
 function HeroVisual() {
   return (
-    <div className="relative mx-auto w-full max-w-[min(100%,380px)] sm:max-w-[400px] lg:max-w-[420px]" aria-label="Saif Tech Global — global technology company visual">
+    <div className="relative mx-auto w-full max-w-[560px] md:ml-auto md:mr-0" aria-label="Saif Tech Global — global technology company visual">
       {/* Outer glow */}
       <div className="absolute -inset-6 rounded-[40px] bg-[radial-gradient(closest-side,rgba(255,122,24,0.22),transparent)] blur-2xl" aria-hidden="true" />
 
@@ -33,7 +33,7 @@ function HeroVisual() {
 
         {/* Globe visual */}
         <div className="relative bg-[radial-gradient(ellipse_at_center,rgba(255,122,24,0.14),transparent_65%),linear-gradient(180deg,#0b0d1a,#06070f)] px-4 pb-6 pt-4 sm:px-5">
-          <div className="relative mx-auto aspect-square w-[min(100%,260px)] max-w-[260px]">
+          <div className="relative mx-auto aspect-square w-full max-w-[340px]">
             <div className="h-full w-full overflow-hidden rounded-[20px] border border-orange-400/20 bg-[#020205] shadow-[0_0_80px_-10px_rgba(255,122,24,0.45),inset_0_0_40px_rgba(255,122,24,0.08)]">
               <img
                 src={HERO_BRAND_SRC}
@@ -45,19 +45,19 @@ function HeroVisual() {
                 decoding="async"
               />
             </div>
-            <div className="absolute -left-1 top-6 animate-float-slow rounded-xl border border-white/10 bg-black/60 px-2.5 py-1.5 text-[10px] font-semibold text-white/90 backdrop-blur-xl sm:-left-2 sm:top-8 sm:px-3 sm:py-2 sm:text-[11px]">
+            <div className="absolute -left-2 top-8 animate-float-slow rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-[11px] font-semibold text-white/90 backdrop-blur-xl">
               <span className="flex items-center gap-1.5"><Cpu className="h-3.5 w-3.5 text-orange-400" /> Mistral X · Live</span>
             </div>
-            <div className="absolute -right-1 top-1/3 animate-float-slow rounded-xl border border-white/10 bg-black/60 px-2.5 py-1.5 text-[10px] font-semibold text-white/90 backdrop-blur-xl sm:-right-2 sm:px-3 sm:py-2 sm:text-[11px]" style={{ animationDelay: "1.4s" }}>
+            <div className="absolute -right-2 top-1/3 animate-float-slow rounded-xl border border-white/10 bg-black/60 px-3 py-2 text-[11px] font-semibold text-white/90 backdrop-blur-xl" style={{ animationDelay: "1.4s" }}>
               <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-emerald-400" /> 5/5 platforms</span>
             </div>
-            <div className="absolute bottom-2 left-4 animate-float-slow rounded-xl border border-orange-400/20 bg-orange-500/10 px-2.5 py-1.5 text-[10px] font-semibold text-orange-200 backdrop-blur-xl sm:left-6 sm:px-3 sm:py-2 sm:text-[11px]" style={{ animationDelay: "2.6s" }}>
+            <div className="absolute bottom-2 left-6 animate-float-slow rounded-xl border border-orange-400/20 bg-orange-500/10 px-3 py-2 text-[11px] font-semibold text-orange-200 backdrop-blur-xl" style={{ animationDelay: "2.6s" }}>
               Zero-Data Trace
             </div>
           </div>
 
           {/* mini platform dots */}
-          <div className="mx-auto mt-3 flex max-w-[260px] items-center justify-between rounded-2xl border border-white/8 bg-black/40 px-3 py-2.5 backdrop-blur-xl">
+          <div className="mx-auto mt-4 flex max-w-[320px] items-center justify-between rounded-2xl border border-white/8 bg-black/40 px-4 py-3 backdrop-blur-xl">
             {PLATFORMS.map((p) => (
               <a
                 key={p.id}
@@ -86,7 +86,7 @@ export default function Hero({ live }: { live: LiveState }) {
   return (
     <section id="top" className="relative z-10 overflow-x-hidden pt-32 sm:pt-36 lg:pt-40" aria-label="Introduction">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.12fr_.88fr] lg:gap-6">
+        <div className="hero-split grid items-center gap-12 md:grid-cols-[1.05fr_.95fr] md:gap-8 lg:gap-8">
           {/* Copy */}
           <div className="reveal is-visible text-center lg:text-left">
             <div className="inline-flex flex-wrap items-center justify-center gap-2 lg:justify-start">
@@ -96,7 +96,7 @@ export default function Hero({ live }: { live: LiveState }) {
               </span>
             </div>
 
-            <h1 className="mt-6 font-display text-[2.45rem] font-bold leading-[1.04] tracking-tight text-white sm:text-[3.15rem] md:text-5xl lg:text-[4rem]">
+            <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-[4.15rem]">
               Building{" "}
               <span className="text-luxury-gradient">global intelligence</span>{" "}
               for the world.
