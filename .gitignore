@@ -3,3 +3,5 @@ Thumbs.db
 *.log
 .wrangler/
 node_modules/
+_musa-react-src/node_modules/
+_musa-react-src/dist/
