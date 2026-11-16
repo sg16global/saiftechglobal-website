@@ -5,3 +5,7 @@ Thumbs.db
 node_modules/
 _musa-react-src/node_modules/
 _musa-react-src/dist/
+
+# Local secrets for `wrangler pages dev` (never commit)
+.dev.vars
+.wrangler/

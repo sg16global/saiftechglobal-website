@@ -74,7 +74,7 @@ export default function Showcase() {
                   {/* progress bar */}
                   <div className="mt-3 h-1 overflow-hidden rounded-full bg-white/8" aria-hidden="true">
                     <div
-                      className="h-full rounded-full bg-gradient-to-r from-orange-600 to-amber-300 transition-all duration-500"
+                      className="h-full rounded-full bg-gradient-to-r from-orange-600 to-orange-200 transition-all duration-500"
                       style={{ width: `${((PLATFORMS.findIndex((p) => p.id === active) + 1) / PLATFORMS.length) * 100}%` }}
                     />
                   </div>
@@ -93,7 +93,7 @@ export default function Showcase() {
                         aria-current={isActive ? "true" : undefined}
                         className={`group flex items-center gap-3 rounded-2xl border p-3 transition-all duration-300 ${
                           isActive
-                            ? "border-orange-400/35 bg-orange-500/10 shadow-[0_0_24px_-8px_rgba(255,122,24,.5)]"
+                            ? "border-orange-400/35 bg-orange-500/10 shadow-[0_0_24px_-8px_rgba(242,21,95,.5)]"
                             : "border-transparent hover:border-white/10 hover:bg-white/[0.04]"
                         }`}
                       >
@@ -112,7 +112,7 @@ export default function Showcase() {
                         </span>
                         <span
                           className={`ml-auto h-2 w-2 shrink-0 rounded-full transition ${
-                            isActive ? "bg-orange-400 shadow-[0_0_10px_2px_rgba(255,122,24,.6)]" : "bg-white/15"
+                            isActive ? "bg-orange-400 shadow-[0_0_10px_2px_rgba(242,21,95,.6)]" : "bg-white/15"
                           }`}
                           aria-hidden="true"
                         />
@@ -123,7 +123,7 @@ export default function Showcase() {
                 <div className="border-t border-white/8 p-3">
                   <a
                     href="#products"
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] px-4 py-2.5 text-[13px] font-bold text-[#1a0b00] transition hover:brightness-110"
+                    className="flex items-center justify-center gap-2 rounded-xl bg-[#f2155f] px-4 py-2.5 text-[13px] font-bold text-white transition hover:brightness-110"
                   >
                     All products <ArrowUpRight className="h-3.5 w-3.5" />
                   </a>
@@ -187,7 +187,7 @@ export default function Showcase() {
                         </span>
                         <span className="truncate text-[11px] font-medium text-white/50">{p.displayUrl}</span>
                       </div>
-                      <div className="relative flex-1 bg-[radial-gradient(ellipse_at_top,rgba(255,122,24,0.1),transparent_60%)] p-5">
+                      <div className="relative flex-1 bg-[radial-gradient(ellipse_at_top,rgba(242,21,95,0.05),transparent_60%)] p-5">
                         <div className="space-y-2.5" aria-hidden="true">
                           <div className={`h-2.5 w-2/3 rounded-full bg-gradient-to-r ${a.gradient} opacity-70`} />
                           <div className="h-2 w-full rounded-full bg-white/10" />

@@ -58,8 +58,8 @@ export default function Pricing() {
             >
               {t.featured && (
                 <>
-                  <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-orange-600 via-amber-300 to-orange-600" aria-hidden="true" />
-                  <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#1a0b00]">
+                  <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-orange-600 via-orange-200 to-orange-600" aria-hidden="true" />
+                  <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-[#f2155f] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-white">
                     <Sparkles className="h-3 w-3" /> Popular
                   </span>
                 </>
@@ -73,7 +73,7 @@ export default function Pricing() {
               <ul className="mt-6 space-y-2.5 border-t border-white/8 pt-6">
                 {t.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5 text-sm text-white/70">
-                    <span className={`mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full ${t.featured ? "bg-gradient-to-br from-orange-500 to-amber-300" : "bg-white/10"}`}>
+                    <span className={`mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full ${t.featured ? "bg-gradient-to-br from-orange-500 to-orange-200" : "bg-white/10"}`}>
                       <Check className={`h-3 w-3 ${t.featured ? "text-black" : "text-orange-300"}`} strokeWidth={3} />
                     </span>
                     {f}
@@ -86,7 +86,7 @@ export default function Pricing() {
                 rel="noopener noreferrer"
                 className={`group mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition ${
                   t.featured
-                    ? "bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] text-[#1a0b00] hover:brightness-110"
+                    ? "bg-[#f2155f] text-white hover:brightness-110"
                     : "border border-white/12 bg-white/[0.05] text-white hover:border-orange-400/40 hover:bg-orange-500/10"
                 }`}
                 aria-label={`${t.cta} on SG16 Ads Network (opens in new tab)`}

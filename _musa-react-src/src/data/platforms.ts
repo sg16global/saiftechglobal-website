@@ -35,7 +35,7 @@ export const PLATFORMS: Platform[] = [
     tag: "AI",
     name: "SG16 AI Engine",
     shortName: "AI Engine",
-    tagline: "Multi-workspace AI for chat, code, docs & images — sovereign Mistral brain",
+    tagline: "Multi-workspace AI for chat, code, docs & images — sovereign SG16 Brain",
     description: "Multi-workspace AI platform for chat, coding, documents, images, and more.",
     longDescription:
       "The flagship sovereign AI workspace. Five dedicated shields, a private cloud brain, and Zero-Data Trace privacy — built for creators, developers, students and teams worldwide.",
@@ -44,7 +44,7 @@ export const PLATFORMS: Platform[] = [
     accent: "orange",
     badge: "Flagship · Live",
     features: [
-      "SG16 Mistral X cloud brain — api.mistralbrain.com, 24/7 sovereign stack",
+      "SG16 Brain cloud core — api.mistralbrain.com, 24/7 sovereign stack",
       "Five shields — Coding Hub, Health, Student, Market, AI Chat",
       "Zero-Data Trace policy — chat processed live, not stored on servers",
       "Google sign-in · Coding Shield + Platform Shield security tools",
@@ -54,7 +54,7 @@ export const PLATFORMS: Platform[] = [
       { label: "Brain", value: "24/7" },
       { label: "Privacy", value: "Zero-Trace" },
     ],
-    glow: "rgba(255,122,24,.35)",
+    glow: "rgba(242,21,95,.35)",
   },
   {
     id: "finance",
@@ -163,10 +163,37 @@ export const PLATFORMS: Platform[] = [
     ],
     glow: "rgba(167,139,250,.32)",
   },
+  {
+    id: "identifier",
+    index: "06",
+    tag: "ID",
+    name: "SG16 Identifier",
+    shortName: "Identifier",
+    tagline: "Verify products, news, websites and media — with evidence",
+    description: "Evidence-based verification for products, news, websites and media.",
+    longDescription:
+      "Is it real? SG16 Identifier checks products, news stories, websites and media and shows the evidence behind every verdict — so people can trust what they buy, read and share.",
+    url: "https://sg16identifier.com",
+    displayUrl: "sg16identifier.com",
+    accent: "emerald",
+    badge: "New · Live",
+    features: [
+      "Verify products before you buy",
+      "Check news stories and websites",
+      "Inspect images and media",
+      "Every result backed by evidence",
+    ],
+    stats: [
+      { label: "Verifies", value: "Products" },
+      { label: "Also", value: "News · Media" },
+      { label: "Method", value: "Evidence" },
+    ],
+    glow: "rgba(52,211,153,.3)",
+  },
   // ── ADD NEW PROJECT HERE ──
   // {
   //   id: "new-project",
-  //   index: "06",
+  //   index: "07",
   //   tag: "New",
   //   name: "SG16 New Project",
   //   shortName: "New",
@@ -192,7 +219,7 @@ export const ACCENT_STYLES: Record<
     bg: "bg-orange-500/15",
     border: "border-orange-400/25",
     dot: "bg-orange-400",
-    gradient: "from-orange-500 to-amber-400",
+    gradient: "from-orange-500 to-orange-300",
     softBg: "bg-orange-500/[0.07]",
   },
   gold: {

@@ -3,12 +3,13 @@
  * Server-side pings so the hero is not a row of fake "Live" badges.
  */
 const TARGETS = [
-  { id: 'brain', label: 'SG16 Mistral X', url: 'https://api.mistralbrain.com/api/v1/ping' },
+  { id: 'brain', label: 'SG16 Brain', url: 'https://api.mistralbrain.com/api/v1/ping' },
   { id: 'engine', label: 'SG16 AI Engine', url: 'https://sg16engine.com/health/live' },
   { id: 'children', label: 'Children World', url: 'https://sg16children.com/api/sg16/health' },
   { id: 'finance', label: 'SG16 Finance', url: 'https://sg16finance.com/api/ticker' },
   { id: 'geo', label: 'Geo Monitor', url: 'https://saifglobal16.info/api/news' },
   { id: 'ads', label: 'Ads Network', url: 'https://ads.saiftechglobal.com/' },
+  { id: 'identifier', label: 'SG16 Identifier', url: 'https://sg16identifier.com/' },
 ];
 
 async function probe(url) {

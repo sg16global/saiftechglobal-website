@@ -24,29 +24,33 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-4 text-sm text-white/55">Global Technology &amp; Digital Solutions · Albuquerque, NM, USA</p>
-            <figure className="mt-4 max-w-[220px]">
-              <a
-                href="/assets/nm-certificate-of-organization.jpg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)] transition hover:border-orange-400/30"
+            <figure className="mt-5 max-w-[300px]">
+              <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/45">LLC registration</p>
+              <div
+                className="doc-protect overflow-hidden rounded-xl border border-white/15 bg-white shadow-[0_8px_32px_-12px_rgba(0,0,0,0.8)]"
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
+                data-voice="This is Saif Tech Global's Certificate of Organization from the New Mexico Secretary of State, entity ID 0008128993. It is shown as a watermarked display copy only."
               >
                 <img
-                  src="/assets/nm-certificate-of-organization.jpg"
-                  width={440}
-                  height={568}
-                  alt="New Mexico Certificate of Organization — Saif Tech Global LLC, registration 0008128993"
+                  src="/assets/nm-certificate-of-organization-watermarked.jpg"
+                  width={791}
+                  height={1024}
+                  draggable={false}
+                  alt="New Mexico Certificate of Organization — Saif Tech Global LLC, entity ID 0008128993 (watermarked display copy)"
+                  title="Watermarked display copy — © 2026 SAIF TECH GLOBAL LLC"
                   className="h-auto w-full"
                   loading="lazy"
                   decoding="async"
                 />
-              </a>
-              <figcaption className="mt-2 text-[10px] leading-snug text-white/40">
-                Certificate of Organization · State of New Mexico · effective September 10, 2026
+              </div>
+              <figcaption className="mt-2 text-[10px] leading-snug text-white/45">
+                Certificate of Organization · State of New Mexico · effective September 10, 2026 · watermarked display copy —
+                not valid for any other use.
               </figcaption>
             </figure>
             <p className="mt-3 text-[13px] leading-relaxed text-white/40">
-              SG16 Brain · SG16 Mistral X ·{" "}
+              SG16 Brain ·{" "}
               <a
                 href="https://mistralbrain.com"
                 target="_blank"
@@ -143,15 +147,20 @@ export default function Footer() {
               aria-label="Back to top"
             >
               Back to top
-              <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-orange-500 to-amber-400 text-black transition-transform duration-300 group-hover:-translate-y-0.5">
+              <span className="grid h-7 w-7 place-items-center rounded-lg bg-gradient-to-br from-orange-500 to-orange-300 text-black transition-transform duration-300 group-hover:-translate-y-0.5">
                 <ArrowUp className="h-4 w-4" />
               </span>
             </a>
-            <p className="text-[13px] text-white/35 lg:text-right">© 2026 Saif Tech Global LLC.<br />All rights reserved.</p>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/8 pt-6 text-xs text-white/30">
+        <p className="mt-10 border-t border-white/8 pt-6 text-[12.5px] leading-relaxed text-white/55" data-voice="This is the company's legal and copyright notice.">
+          © 2026 SAIF TECH GLOBAL LLC. All Rights Reserved. SAIF TECH GLOBAL LLC™ and its official golden emblem are exclusive
+          trademarks and copyrighted assets of SAIF TECH GLOBAL LLC (Registered in New Mexico, USA | Entity ID: 0008128993 |
+          8206 Louisiana Blvd NE, Ste A #10595, Albuquerque, NM 87113).
+        </p>
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-white/30">
           <p>Designed in Albuquerque · Delivered on the edge · Loved worldwide</p>
           <p className="font-mono">saiftechglobal.com</p>
         </div>

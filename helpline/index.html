@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>24/7 Helpline — Saif Tech Global LLC</title>
+    <meta name="description" content="Centralized 24/7 AI Helpline for every Saif Tech Global platform: SG16 AI Engine, Finance, Children World, Geopolitical Monitor, Ads Network and Identifier." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png" />
+    <link rel="stylesheet" href="/css/portal.css" />
+  </head>
+  <body>
+    <header class="p-header">
+      <a class="brand" href="/" id="brand" aria-label="Saif Tech Global LLC — home">
+        <span>
+          <strong>Saif Tech Global <span>LLC</span></strong>
+          <small>Centralized 24/7 Helpline</small>
+        </span>
+      </a>
+      <nav class="p-nav" aria-label="Portal">
+        <a class="btn small" href="/working-mode/">Working Mode</a>
+        <a class="btn small" href="/">Home</a>
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <p class="label">One support desk for the whole SG16 ecosystem</p>
+        <h1>24/7 <em>Helpline</em></h1>
+        <div class="bar" aria-hidden="true"></div>
+        <p>24/7 AI support for every Saif Tech Global platform. Lifetime members (STG-M tokens) get priority help from an AI that knows their project in full.</p>
+      </section>
+
+      <section class="grid cols-2" style="margin-top: 26px">
+        <aside class="panel">
+          <p class="label">You are getting help with</p>
+          <div id="platform" style="margin: 8px 0 14px"></div>
+          <label class="field"><span>Change product</span><select id="platform-select" aria-label="Product"></select></label>
+          <p class="label" style="margin-top: 18px">My tickets</p>
+          <div id="tickets" class="list"><p class="small muted">Sign in to see your tickets.</p></div>
+        </aside>
+        <div class="panel" id="main">
+          <div class="chat" id="log" role="log" aria-live="polite"></div>
+          <p class="typing hidden" id="typing">Support agent is writing…</p>
+          <form class="composer" id="composer">
+            <textarea id="input" placeholder="Describe your question or problem…" aria-label="Your message" maxlength="3000"></textarea>
+            <button class="btn primary" type="submit" id="send">Send</button>
+          </form>
+          <div class="spread" style="margin-top: 12px">
+            <p class="small muted">The AI agent cannot access your account, change settings or issue refunds.</p>
+            <button class="btn" type="button" id="human">Open a support ticket</button>
+          </div>
+          <div id="ticket-area" style="margin-top: 16px"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="p-foot">
+      © 2026 SAIF TECH GLOBAL LLC. All Rights Reserved. Registered in New Mexico, USA · Entity ID 0008128993 · <a href="/privacy">Privacy</a>
+    </footer>
+
+    <script src="/js/portal.js"></script>
+    <script src="/js/helpline.js"></script>
+  </body>
+</html>

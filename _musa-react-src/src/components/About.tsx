@@ -16,7 +16,7 @@ export default function About() {
 
         {/* Brand banner — recreated as premium CSS visual (original image preserved in spirit) */}
         <div className="reveal glass relative mt-10 overflow-hidden rounded-[28px]" style={{ ["--reveal-delay" as string]: "100ms" }}>
-          <div className="absolute inset-0 bg-[radial-gradient(800px_300px_at_50%_0%,rgba(255,122,24,0.16),transparent_65%)]" aria-hidden="true" />
+          <div className="absolute inset-0 bg-[radial-gradient(800px_300px_at_50%_0%,rgba(242,21,95,0.06),transparent_65%)]" aria-hidden="true" />
           <div className="relative grid items-center gap-8 p-8 sm:p-12 lg:grid-cols-[1fr_.9fr]">
             <div>
               <p className="inline-flex items-center gap-2 rounded-full border border-orange-400/25 bg-orange-500/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-orange-200">
@@ -51,7 +51,7 @@ export default function About() {
                   </div>
                 ))}
               </div>
-              <div className="absolute -inset-4 -z-10 rounded-[28px] bg-[radial-gradient(closest-side,rgba(255,122,24,0.12),transparent)] blur-xl" aria-hidden="true" />
+              <div className="absolute -inset-4 -z-10 rounded-[28px] bg-[radial-gradient(closest-side,rgba(242,21,95,0.06),transparent)] blur-xl" aria-hidden="true" />
             </div>
           </div>
         </div>

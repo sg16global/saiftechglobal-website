@@ -1,0 +1,38 @@
+# Saif Tech Global LLC — Cloudflare Pages project "saiftechglobal"
+# Company Service Infrastructure (Working Mode + Centralized 24/7 Helpline + Admin).
+# Completely independent of SG16 Central Brain: no binding, URL or key of that project is used here.
+#
+# Before the first production deploy, follow docs/working-mode/SETUP.md:
+#   1. `npx wrangler d1 create stg-company-db` and paste the returned database_id below.
+#   2. Apply migrations, add secrets, configure Cloudflare Access for /admin and /api/admin.
+
+name = "saiftechglobal"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "stg-company-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[ai]
+binding = "AI"
+
+# Build runner Worker (runner/wrangler.toml) — AI build/test/retry/refund loop with the container sandbox.
+[[services]]
+binding = "RUNNER"
+service = "stg-company-runner"
+
+[vars]
+# "test" uses https://test.dodopayments.com, "live" uses https://live.dodopayments.com
+DODO_MODE = "test"
+EMAIL_FROM = "Saif Tech Global LLC <no-reply@saiftechglobal.com>"
+# Cloudflare Access (Zero Trust) — protects /admin and /api/admin. Fill in after setup.
+ACCESS_TEAM_DOMAIN = ""
+ACCESS_AUD = ""
+# Comma-separated owner emails; they always get the "owner" role in the Admin Panel.
+OWNER_EMAILS = ""
+
+# Secrets (never put these in this file — add with `wrangler pages secret put <NAME>`):
+#   DODO_API_KEY, DODO_WEBHOOK_SECRET, DODO_PRODUCT_ID, RESEND_API_KEY, PLATFORM_SIGNING_KEYS, RUNNER_SECRET

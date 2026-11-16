@@ -38,7 +38,7 @@ fs.mkdirSync(path.join(outDir, "assets"), { recursive: true });
 const musaPublicAssets = path.join(root, "_musa-react-src", "public", "assets");
 if (fs.existsSync(musaPublicAssets)) {
   for (const name of fs.readdirSync(musaPublicAssets)) {
-    fs.copyFileSync(path.join(musaPublicAssets, name), path.join(outDir, "assets", name));
+    fs.cpSync(path.join(musaPublicAssets, name), path.join(outDir, "assets", name), { recursive: true });
   }
 }
 fs.writeFileSync(path.join(outDir, "css", "musa.css"), css, "utf8");
@@ -61,7 +61,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "Saif Tech Global LLC",
   url: "https://saiftechglobal.com",
-  logo: "https://saiftechglobal.com/assets/logo-llc.jpg",
+  logo: "https://saiftechglobal.com/assets/emblem-base.png",
   email: "contact@saiftechglobal.com",
   address: {
     "@type": "PostalAddress",
@@ -93,6 +93,8 @@ ${cleanedHead}
   <body>
 ${assetizedHtml}
     <script src="js/musa.js" defer></script>
+    <script src="js/ambient-loop.js" defer></script>
+    <script src="js/voice-guide.js" defer></script>
     <script src="../js/pwa.js" defer></script>
   </body>
 </html>

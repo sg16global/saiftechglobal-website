@@ -1,0 +1,40 @@
+# Saif Tech Global LLC — Build Runner (production). Requires the Workers Paid plan (Containers)
+# and Docker on the machine that runs `wrangler deploy` (it builds ./Dockerfile).
+# Deploy:  npx wrangler deploy -c runner/wrangler.toml
+name = "stg-company-runner"
+main = "index.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "stg-company-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"   # same database as the website
+
+[ai]
+binding = "AI"
+
+[vars]
+DODO_MODE = "test"
+EMAIL_FROM = "Saif Tech Global LLC <no-reply@saiftechglobal.com>"
+
+# Build sandbox: one container per BuildJob Durable Object, internet disabled at start().
+[[containers]]
+class_name = "BuildJob"
+scheduling_policy = "durable_object"
+[containers.images.workspace]
+dockerfile = "./Dockerfile"
+
+[[durable_objects.bindings]]
+name = "BUILD_JOB"
+class_name = "BuildJob"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["BuildJob"]
+
+[triggers]
+crons = ["*/10 * * * *"]
+
+# Secrets (wrangler secret put <NAME> -c runner/wrangler.toml):
+#   RUNNER_SECRET (same value as the website's RUNNER_SECRET), DODO_API_KEY, RESEND_API_KEY

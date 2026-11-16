@@ -6,7 +6,7 @@ const TESTIMONIALS = [
     name: "Daniel R.",
     role: "Software developer · United States",
     initials: "DR",
-    accent: "from-orange-500 to-amber-400",
+    accent: "from-orange-500 to-orange-300",
   },
   {
     quote: "My kids ask Robo everything — homework, science, stories. The parent gate gives me real peace of mind. Beautiful and safe.",
@@ -60,7 +60,7 @@ export default function Testimonials() {
           <p className="mt-4 flex items-center justify-center gap-2 text-sm text-white/55">
             <span className="flex gap-0.5" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                <Star key={i} className="h-4 w-4 fill-orange-400 text-orange-400" />
               ))}
             </span>
             From developers, parents, investors and founders
@@ -77,7 +77,7 @@ export default function Testimonials() {
               <Quote className="absolute right-4 top-4 h-8 w-8 text-orange-500/15" aria-hidden="true" />
               <span className="flex gap-0.5" aria-hidden="true">
                 {Array.from({ length: 5 }).map((_, s) => (
-                  <Star key={s} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
+                  <Star key={s} className="h-3.5 w-3.5 fill-orange-400 text-orange-400" />
                 ))}
               </span>
               <blockquote className="mt-4 flex-1 text-[14.5px] leading-relaxed text-white/75">

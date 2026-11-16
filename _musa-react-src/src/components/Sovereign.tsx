@@ -6,7 +6,7 @@ const CARDS = [
   {
     icon: BrainCircuit,
     title: "Sovereign brain",
-    desc: "SG16 Mistral X on api.mistralbrain.com — each SG16 product connects to the brain directly from its own Cloudflare Pages site.",
+    desc: "SG16 Brain on api.mistralbrain.com — each SG16 product connects to the brain directly from its own Cloudflare Pages site.",
   },
   {
     icon: Network,
@@ -22,24 +22,24 @@ const CARDS = [
 
 function SovereignBadge() {
   return (
-    <div className="relative mx-auto w-full max-w-[340px]" aria-label="Sovereign SG16 Brain — Mistral X Instruct, Apache 2.0, mistralbrain.com">
-      <div className="absolute -inset-6 rounded-full bg-[radial-gradient(closest-side,rgba(255,122,24,0.25),transparent)] blur-2xl" aria-hidden="true" />
+    <div className="relative mx-auto w-full max-w-[340px]" aria-label="Sovereign SG16 Brain — Apache 2.0, mistralbrain.com">
+      <div className="absolute -inset-6 rounded-full bg-[radial-gradient(closest-side,rgba(242,21,95,0.1),transparent)] blur-2xl" aria-hidden="true" />
       <div className="glass relative overflow-hidden rounded-[32px] p-8 text-center shadow-luxury">
         <div className="pointer-events-none absolute inset-y-0 w-1/4 bg-gradient-to-r from-transparent via-white/12 to-transparent animate-shine-sweep" aria-hidden="true" />
         <div className="relative mx-auto w-full max-w-[260px]">
-          <div className="absolute -inset-4 rounded-full bg-[radial-gradient(closest-side,rgba(255,122,24,0.2),transparent)] blur-xl" aria-hidden="true" />
+          <div className="absolute -inset-4 rounded-full bg-[radial-gradient(closest-side,rgba(242,21,95,0.08),transparent)] blur-xl" aria-hidden="true" />
           <img
             src={SOVEREIGN_BADGE_SRC}
             width={520}
             height={520}
-            alt="Sovereign SG16 Brain emblem — Mistral X Instruct, Apache 2.0"
+            alt="Sovereign SG16 Brain emblem — Apache 2.0"
             className="relative mx-auto h-auto w-full drop-shadow-[0_12px_40px_rgba(0,0,0,0.55)]"
             loading="lazy"
             decoding="async"
           />
         </div>
-        <p className="mt-5 text-[11px] font-bold uppercase tracking-[0.28em] text-orange-300">Sovereign SG16 Brain</p>
-        <p className="mt-2 font-display text-2xl font-bold tracking-tight text-white">Mistral X</p>
+        <p className="mt-5 text-[11px] font-bold uppercase tracking-[0.28em] text-orange-300">Sovereign AI core</p>
+        <p className="mt-2 font-display text-2xl font-bold tracking-tight text-white">SG16 Brain</p>
         <p className="mt-1 text-xs font-medium text-white/50">Instruct · Apache 2.0</p>
         <p className="mx-auto mt-4 flex flex-wrap items-center justify-center gap-2">
           <a
@@ -78,7 +78,7 @@ export default function Sovereign() {
               Own brain. <span className="text-luxury-gradient">Not a rented AI wrapper.</span>
             </h2>
             <p className="mt-4 max-w-xl leading-relaxed text-white/60">
-              SG16 AI Engine runs on a sovereign cloud brain — SG16 Mistral X at api.mistralbrain.com — operated 24/7 by
+              SG16 AI Engine runs on a sovereign cloud brain — SG16 Brain at api.mistralbrain.com — operated 24/7 by
               Saif Tech Global on Cloudflare infrastructure.
             </p>
 
