@@ -7,10 +7,10 @@
     <meta name="description" content="Working Mode: talk to the Saif Tech Global AI, confirm your project brief, approve the design, get a fair AI price, and receive tested software — 24/7." />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png" />
-    <link rel="stylesheet" href="/css/portal.css" />
+    <link rel="stylesheet" href="/css/portal.css?v=4" />
     <style>
       .wm { display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 18px; }
-      @media (min-width: 1000px) { .wm { grid-template-columns: 1fr 280px; } }
+      @media (min-width: 1000px) { .wm { grid-template-columns: minmax(0, 1fr) 320px; } }
       .stagebar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
       .stagebar span { font-style: normal; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
       .stagebar span.on { border-color: var(--pink); color: #fff; background: var(--pink-soft); }
@@ -46,7 +46,7 @@
       </section>
 
       <section class="wm">
-        <div class="panel" id="main">
+        <div class="panel chat-panel" id="main">
           <div class="stagebar" id="stagebar" aria-label="Project progress"></div>
           <div class="chat" id="log" role="log" aria-live="polite"></div>
           <p class="typing hidden" id="typing"><span class="spin" aria-hidden="true"></span> <span id="typing-text">Saif Tech Global AI is thinking…</span></p>
@@ -70,7 +70,7 @@
       <a href="/privacy">Privacy</a> · <a href="/helpline/">Helpline</a>
     </footer>
 
-    <script src="/js/portal.js"></script>
-    <script src="/js/working-mode.js"></script>
+    <script src="/js/portal.js?v=3"></script>
+    <script src="/js/working-mode.js?v=3"></script>
   </body>
 </html>
