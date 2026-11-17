@@ -15,7 +15,7 @@ database_id = "ae1e0668-afc1-4d23-9514-78955aa051d5"   # same database as the we
 binding = "AI"
 
 [vars]
-DODO_MODE = "test"
+DODO_MODE = "live"
 EMAIL_FROM = "Saif Tech Global LLC <no-reply@saiftechglobal.com>"
 
 # Build sandbox: one container per BuildJob Durable Object, internet disabled at start().
