@@ -26,13 +26,13 @@ service = "stg-company-runner"
 
 [vars]
 # "test" uses https://test.dodopayments.com, "live" uses https://live.dodopayments.com
-DODO_MODE = "test"
+DODO_MODE = "live"
 EMAIL_FROM = "Saif Tech Global LLC <no-reply@saiftechglobal.com>"
 # Cloudflare Access (Zero Trust) — protects /admin and /api/admin. Fill in after setup.
-ACCESS_TEAM_DOMAIN = ""
-ACCESS_AUD = ""
+ACCESS_TEAM_DOMAIN = "sg16global.cloudflareaccess.com"
+ACCESS_AUD = "e96732c00ed55e026c7126ef45d9ef51f501ee5187e556c24a7d408fd11f2ea4"
 # Comma-separated owner emails; they always get the "owner" role in the Admin Panel.
-OWNER_EMAILS = ""
+OWNER_EMAILS = "sg16global@gmail.com"
 
 # Secrets (never put these in this file — add with `wrangler pages secret put <NAME>`):
 #   DODO_API_KEY, DODO_WEBHOOK_SECRET, DODO_PRODUCT_ID, RESEND_API_KEY, PLATFORM_SIGNING_KEYS, RUNNER_SECRET
