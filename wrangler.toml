@@ -13,7 +13,7 @@ compatibility_date = "2026-11-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "stg-company-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "ae1e0668-afc1-4d23-9514-78955aa051d5"
 migrations_dir = "migrations"
 
 [ai]
