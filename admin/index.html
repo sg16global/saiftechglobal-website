@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Admin Panel — Saif Tech Global LLC</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="/css/portal.css?v=4" />
+    <style>
+      body { font-style: normal; }
+      .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin: 16px 0; }
+      .tabs .btn.active { background: var(--pink); border-color: var(--pink); color: #fff; }
+      .kpis { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+      .kpi { border: 1px solid var(--line); border-radius: 14px; padding: 14px; background: #050506; }
+      .kpi b { display: block; font-size: 28px; font-family: "Bodoni Moda", Georgia, serif; }
+      .form-grid { display: grid; gap: 10px 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      fieldset { border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 0 0 14px; }
+      legend { padding: 0 6px; color: var(--pink-hi); font-family: "Bodoni Moda", Georgia, serif; font-style: italic; }
+      .rows .row-item { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) auto; align-items: end; margin-bottom: 8px; }
+      pre.json { white-space: pre-wrap; background: #050506; border: 1px solid var(--line); border-radius: 12px; padding: 12px; font-size: 12px; max-height: 320px; overflow: auto; }
+      tr.click { cursor: pointer; }
+      tr.click:hover td { background: rgba(242, 21, 95, 0.06); }
+    </style>
+  </head>
+  <body>
+    <header class="p-header">
+      <a class="brand" href="/" id="brand" aria-label="Saif Tech Global LLC — home">
+        <span><strong>Saif Tech Global <span>LLC</span></strong><small>Company Admin Panel</small></span>
+      </a>
+      <div class="row"><span class="small muted" id="who"></span></div>
+    </header>
+    <main class="wrap" style="padding-top: 10px">
+      <nav class="tabs" id="tabs" aria-label="Admin sections"></nav>
+      <section id="view" aria-live="polite"></section>
+    </main>
+    <script src="/js/portal.js?v=3"></script>
+    <script src="/js/admin.js?v=3"></script>
+  </body>
+</html>

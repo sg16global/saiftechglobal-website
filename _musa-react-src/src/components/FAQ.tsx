@@ -8,7 +8,7 @@ const FAQS = [
   },
   {
     q: "What makes SG16 AI Engine sovereign?",
-    a: "SG16 AI Engine runs on SG16 Mistral X at api.mistralbrain.com — a sovereign cloud brain operated 24/7 by Saif Tech Global on Cloudflare infrastructure. Each SG16 product connects to the brain directly from its own Cloudflare Pages site. It is our own stack, not a rented API wrapper.",
+    a: "SG16 AI Engine runs on SG16 Brain at api.mistralbrain.com — a sovereign cloud brain operated 24/7 by Saif Tech Global on Cloudflare infrastructure. Each SG16 product connects to the brain directly from its own Cloudflare Pages site. It is our own stack, not a rented API wrapper.",
   },
   {
     q: "How does Zero-Data Trace privacy work?",
@@ -54,7 +54,7 @@ export default function FAQ() {
             return (
               <div
                 key={f.q}
-                className={`reveal glass overflow-hidden rounded-2xl transition-all duration-300 ${isOpen ? "border-orange-400/25 shadow-[0_0_30px_-12px_rgba(255,122,24,.4)]" : ""}`}
+                className={`reveal glass overflow-hidden rounded-2xl transition-all duration-300 ${isOpen ? "border-orange-400/25 shadow-[0_0_30px_-12px_rgba(242,21,95,.4)]" : ""}`}
                 style={{ ["--reveal-delay" as string]: `${i * 60}ms` }}
               >
                 <button

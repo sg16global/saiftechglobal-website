@@ -1,0 +1,26 @@
+# LOCAL DEVELOPMENT ONLY — same runner without containers (no Docker needed).
+# Code runs through tests/local-executor.mjs (EXECUTOR_URL). Never deploy this file.
+name = "stg-company-runner"
+main = "index.js"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "stg-company-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[ai]
+binding = "AI"
+
+[vars]
+DODO_MODE = "test"
+EXECUTOR_URL = "http://127.0.0.1:8791"
+
+[[durable_objects.bindings]]
+name = "BUILD_JOB"
+class_name = "BuildJob"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["BuildJob"]

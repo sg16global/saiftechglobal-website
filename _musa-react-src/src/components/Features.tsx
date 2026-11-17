@@ -4,7 +4,7 @@ const FEATURES = [
   {
     icon: BrainCircuit,
     title: "Sovereign AI, owned end-to-end",
-    desc: "SG16 Mistral X runs on our own cloud stack — not a rented wrapper. Every product connects directly to api.mistralbrain.com.",
+    desc: "SG16 Brain runs on our own cloud stack — not a rented wrapper. Every product connects directly to api.mistralbrain.com.",
   },
   {
     icon: Lock,
@@ -47,7 +47,7 @@ export default function Features() {
               style={{ ["--reveal-delay" as string]: `${i * 100}ms` }}
             >
               <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-orange-500/10 blur-2xl transition-opacity duration-500 group-hover:bg-orange-500/20" aria-hidden="true" />
-              <span className="relative grid h-12 w-12 place-items-center rounded-2xl border border-orange-400/25 bg-gradient-to-br from-orange-500/20 to-amber-400/10 text-orange-300 shadow-[0_8px_24px_-8px_rgba(255,122,24,.5)]">
+              <span className="relative grid h-12 w-12 place-items-center rounded-2xl border border-orange-400/25 bg-gradient-to-br from-orange-500/20 to-orange-300/10 text-orange-300 shadow-[0_8px_24px_-8px_rgba(242,21,95,.5)]">
                 <f.icon className="h-6 w-6" />
               </span>
               <h3 className="relative mt-5 font-display text-lg font-semibold tracking-tight text-white">{f.title}</h3>

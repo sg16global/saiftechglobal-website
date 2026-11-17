@@ -7,6 +7,7 @@ import Features from "./components/Features";
 import Showcase from "./components/Showcase";
 import Sovereign from "./components/Sovereign";
 import Philosophy from "./components/Philosophy";
+import Pioneers from "./components/Pioneers";
 import Products from "./components/Products";
 import Benefits from "./components/Benefits";
 import Testimonials from "./components/Testimonials";
@@ -23,18 +24,19 @@ export default function App() {
   useRevealObserver();
 
   return (
-    <div className="relative min-h-screen bg-[#020205] text-[#f0f6ff] antialiased">
+    <div className="relative min-h-screen bg-black text-[#f5f5f7] antialiased">
       <a href="#main" className="skip-link">
         Skip to content
       </a>
 
       <AmbientBackground />
-      <Navbar liveCount={live.liveCount || 5} total={live.total} />
+      <Navbar liveCount={live.liveCount || 6} total={live.total} />
 
       <main id="main" className="relative">
         {/* Continuous long-scrolling premium flow — no boxy breaks */}
         <Hero live={live} />
         <NetworkRail live={live} />
+        <Pioneers />
         <SocialProof />
         <Features />
         <Showcase />
@@ -60,7 +62,7 @@ export default function App() {
             "@type": "Organization",
             name: "Saif Tech Global LLC",
             url: "https://saiftechglobal.com",
-            logo: "https://saiftechglobal.com/assets/logo-llc.jpg",
+            logo: "https://saiftechglobal.com/assets/emblem-base.png",
             email: "contact@saiftechglobal.com",
             address: {
               "@type": "PostalAddress",

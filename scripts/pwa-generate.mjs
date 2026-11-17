@@ -110,6 +110,8 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
+  // Never cache live/private data: APIs, admin, and customer portals always go to the network.
+  if (['api', 'admin', 'working-mode', 'helpline'].includes(url.pathname.split('/')[1])) return;
 
   event.respondWith(
     caches.match(event.request).then((cached) => {
@@ -119,7 +121,7 @@ self.addEventListener('fetch', (event) => {
         const copy = response.clone();
         caches.open(CACHE).then((cache) => cache.put(event.request, copy));
         return response;
-      }).catch(() => caches.match(config.start_url || '/'));
+      }).catch(() => caches.match('/'));
     })
   );
 });

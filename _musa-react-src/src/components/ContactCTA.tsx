@@ -15,8 +15,8 @@ export default function ContactCTA() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Final CTA banner */}
         <div className="reveal glass-orange relative overflow-hidden rounded-[32px] p-8 text-center shadow-luxury sm:p-14">
-          <div className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(255,165,59,0.3),transparent)] blur-2xl" aria-hidden="true" />
-          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-amber-300 to-transparent" aria-hidden="true" />
+          <div className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[700px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(242,21,95,0.12),transparent)] blur-2xl" aria-hidden="true" />
+          <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-orange-200 to-transparent" aria-hidden="true" />
           <p className="relative inline-flex items-center gap-2 rounded-full border border-orange-300/25 bg-black/30 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.22em] text-orange-200">
             <ShieldCheck className="h-3.5 w-3.5" /> Join the SG16 network
           </p>
@@ -24,14 +24,14 @@ export default function ContactCTA() {
             Start with intelligence. <span className="text-luxury-gradient">Stay for the ecosystem.</span>
           </h2>
           <p className="relative mx-auto mt-4 max-w-xl text-white/65">
-            Five live platforms, one sovereign brain, zero data trace. Free to explore — built for the world, from the USA.
+            Six live platforms, one sovereign brain, zero data trace. Free to explore — built for the world, from the USA.
           </p>
           <div className="relative mt-8 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://sg16engine.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#ff7a18] to-[#ffa53b] px-7 py-3.5 text-[15px] font-bold text-[#1a0b00] shadow-[0_12px_40px_-10px_rgba(255,122,24,0.8)] transition hover:-translate-y-0.5 hover:brightness-110"
+              className="group inline-flex items-center gap-2 rounded-xl bg-[#f2155f] px-7 py-3.5 text-[15px] font-bold text-white shadow-[0_12px_40px_-10px_rgba(242,21,95,0.8)] transition hover:-translate-y-0.5 hover:brightness-110"
             >
               Launch SG16 AI Engine
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

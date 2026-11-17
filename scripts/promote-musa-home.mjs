@@ -34,7 +34,7 @@ html = html
   .replace(/href="\.\.\/assets\//g, 'href="/assets/')
   .replace(/href="\.\.\/manifest\.webmanifest"/g, 'href="/manifest.webmanifest"')
   .replace(/href="css\/musa\.css"/g, 'href="/css/musa.css"')
-  .replace(/src="js\/musa\.js"/g, 'src="/js/musa.js"')
+  .replace(/src="js\/([\w-]+)\.js"/g, 'src="/js/$1.js"')
   .replace(/src="\.\.\/js\/pwa\.js"/g, 'src="/js/pwa.js"')
   .replace(/src="assets\//g, 'src="/assets/');
 
@@ -45,12 +45,14 @@ fs.mkdirSync(path.join(root, "js"), { recursive: true });
 fs.mkdirSync(path.join(root, "assets"), { recursive: true });
 
 fs.copyFileSync(path.join(musaDir, "css", "musa.css"), path.join(root, "css", "musa.css"));
-fs.copyFileSync(path.join(musaDir, "js", "musa.js"), path.join(root, "js", "musa.js"));
+for (const name of fs.readdirSync(path.join(musaDir, "js"))) {
+  if (name.endsWith(".js")) fs.copyFileSync(path.join(musaDir, "js", name), path.join(root, "js", name));
+}
 
 const musaAssets = path.join(musaDir, "assets");
 if (fs.existsSync(musaAssets)) {
   for (const name of fs.readdirSync(musaAssets)) {
-    fs.copyFileSync(path.join(musaAssets, name), path.join(root, "assets", name));
+    fs.cpSync(path.join(musaAssets, name), path.join(root, "assets", name), { recursive: true });
   }
 }
 

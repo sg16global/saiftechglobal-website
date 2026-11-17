@@ -2,7 +2,7 @@ import { Globe2, ShieldCheck, Zap, Server } from "lucide-react";
 
 const STATS = [
   { icon: Globe2, value: "5+", label: "Live platforms, one company", sub: "Engine · Finance · Children · Geo · Ads" },
-  { icon: Server, value: "24/7", label: "Sovereign cloud brain", sub: "SG16 Mistral X · api.mistralbrain.com" },
+  { icon: Server, value: "24/7", label: "Sovereign cloud brain", sub: "SG16 Brain · api.mistralbrain.com" },
   { icon: ShieldCheck, value: "Zero-Trace", label: "Privacy-first policy", sub: "Processed live · not stored" },
   { icon: Zap, value: "Global", label: "Built to scale worldwide", sub: "Cloudflare edge infrastructure" },
 ];
@@ -20,7 +20,7 @@ export default function SocialProof() {
                 style={{ ["--reveal-delay" as string]: `${i * 80}ms` }}
               >
                 <div className="flex items-center gap-3">
-                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-orange-400/20 bg-orange-500/10 text-orange-300 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(255,122,24,.4)]">
+                  <span className="grid h-10 w-10 place-items-center rounded-xl border border-orange-400/20 bg-orange-500/10 text-orange-300 transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(242,21,95,.4)]">
                     <s.icon className="h-5 w-5" />
                   </span>
                   <span className="font-display text-2xl font-bold tracking-tight text-white">{s.value}</span>
@@ -31,7 +31,7 @@ export default function SocialProof() {
             ))}
           </div>
           {/* marquee of domains */}
-          <div className="relative overflow-hidden border-t border-white/8 bg-black/30 py-3" aria-hidden="true">
+          <div className="rail-pause relative overflow-hidden border-t border-white/8 bg-black/30 py-3" aria-hidden="true">
             <div className="flex w-max animate-marquee gap-10 whitespace-nowrap px-6 text-[13px] font-medium text-white/40">
               {[0, 1].map((copy) => (
                 <span key={copy} className="flex gap-10">
@@ -43,8 +43,8 @@ export default function SocialProof() {
                 </span>
               ))}
             </div>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#06070f] to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#06070f] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#0a0a0c] to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0a0a0c] to-transparent" />
           </div>
         </div>
       </div>

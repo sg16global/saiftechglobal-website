@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Working Mode — Saif Tech Global LLC</title>
+    <meta name="description" content="Working Mode: talk to the Saif Tech Global AI, confirm your project brief, approve the design, get a fair AI price, and receive tested software — 24/7." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png" />
+    <link rel="stylesheet" href="/css/portal.css?v=4" />
+    <style>
+      .wm { display: grid; gap: 16px; grid-template-columns: 1fr; margin-top: 18px; }
+      @media (min-width: 1000px) { .wm { grid-template-columns: minmax(0, 1fr) 320px; } }
+      .stagebar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+      .stagebar span { font-style: normal; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+      .stagebar span.on { border-color: var(--pink); color: #fff; background: var(--pink-soft); }
+      .stagebar span.done { color: #a7f3d0; border-color: rgba(52, 211, 153, .45); }
+      .card { margin-top: 14px; border: 1px solid rgba(242, 21, 95, .55); border-radius: 16px; padding: 16px; background: #050506; }
+      .mock { width: 100%; height: min(70dvh, 620px); border: 1px solid var(--line-strong); border-radius: 12px; background: #fff; }
+      .price { font-size: 44px; line-height: 1; margin: 8px 0; }
+      .token { font-family: ui-monospace, Consolas, monospace; font-style: normal; font-size: 22px; letter-spacing: .08em; color: #fff; background: var(--pink-soft); border: 1px dashed var(--pink); border-radius: 12px; padding: 10px 14px; display: inline-block; }
+      .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--pink); border-right-color: transparent; border-radius: 50%; animation: sp 1s linear infinite; vertical-align: -2px; }
+      @keyframes sp { to { transform: rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+    </style>
+  </head>
+  <body>
+    <header class="p-header">
+      <a class="brand" href="/" id="brand" aria-label="Saif Tech Global LLC — home">
+        <span>
+          <strong>Saif Tech Global <span>LLC</span></strong>
+          <small>Working Mode · For Your Destination</small>
+        </span>
+      </a>
+      <nav class="p-nav" aria-label="Portal">
+        <a class="btn small" href="/helpline/">24/7 Helpline</a>
+        <a class="btn small" href="/">Home</a>
+      </nav>
+    </header>
+
+    <main class="wrap" style="padding-top: 18px">
+      <section class="hero" style="padding-top: 6px">
+        <p class="label">An AI-operated company · open 24/7</p>
+        <h1>Working <em>Mode</em></h1>
+        <div class="bar" aria-hidden="true"></div>
+      </section>
+
+      <section class="wm">
+        <div class="panel chat-panel" id="main">
+          <div class="stagebar" id="stagebar" aria-label="Project progress"></div>
+          <div class="chat" id="log" role="log" aria-live="polite"></div>
+          <p class="typing hidden" id="typing"><span class="spin" aria-hidden="true"></span> <span id="typing-text">Saif Tech Global AI is thinking…</span></p>
+          <div id="stage"></div>
+          <form class="composer" id="composer">
+            <textarea id="input" placeholder="Tell us your idea, or the problem you want solved…" aria-label="Your message" maxlength="4000"></textarea>
+            <button class="btn primary" type="submit" id="send">Send</button>
+          </form>
+        </div>
+        <aside class="panel">
+          <div class="spread"><h3>Your projects</h3><button class="btn small" id="new" type="button">+ New</button></div>
+          <div class="list" id="projects" style="margin-top: 10px"><p class="small muted">Projects you start appear here.</p></div>
+          <div id="member" style="margin-top: 16px"></div>
+          <div id="account" style="margin-top: 16px"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="p-foot">
+      © 2026 SAIF TECH GLOBAL LLC. All Rights Reserved. Registered in New Mexico, USA · Entity ID 0008128993 ·
+      <a href="/privacy">Privacy</a> · <a href="/helpline/">Helpline</a>
+    </footer>
+
+    <script src="/js/portal.js?v=3"></script>
+    <script src="/js/working-mode.js?v=3"></script>
+  </body>
+</html>

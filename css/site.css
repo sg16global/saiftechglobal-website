@@ -26,16 +26,16 @@
 }
 
 :root {
-  --bg: #020205;
-  --bg-elevated: #080c14;
-  --bg-card: rgba(8, 14, 24, 0.55);
-  --text: #f0f6ff;
-  --muted: #8fa3bc;
-  --green: #7cfc00;
-  --green-bright: #9dff33;
-  --green-dim: rgba(124, 252, 0, 0.16);
-  --blue: #00d4ff;
-  --blue-dim: rgba(0, 212, 255, 0.14);
+  --bg: #050506;
+  --bg-elevated: #0c0c0f;
+  --bg-card: rgba(12, 12, 15, 0.55);
+  --text: #f5f5f7;
+  --muted: #9a9aa5;
+  --green: #f2155f;
+  --green-bright: #ff4a83;
+  --green-dim: rgba(242, 21, 95, 0.16);
+  --blue: #ff4a83;
+  --blue-dim: rgba(255, 74, 131, 0.14);
   --orange: #c76a16;
   --orange-bright: #ff9a3c;
   --orange-dim: rgba(199, 106, 22, 0.16);
@@ -52,8 +52,8 @@
   --glass-border: rgba(255, 255, 255, 0.14);
   --glass-highlight: rgba(255, 255, 255, 0.22);
   --shadow: 0 28px 90px rgba(0, 0, 0, 0.55);
-  --neon-green: 0 0 40px rgba(124, 252, 0, 0.35);
-  --neon-blue: 0 0 50px rgba(0, 212, 255, 0.28);
+  --neon-green: 0 0 40px rgba(242, 21, 95, 0.35);
+  --neon-blue: 0 0 50px rgba(255, 74, 131, 0.28);
   --radius: 20px;
   --max: 1120px;
 }
@@ -91,9 +91,9 @@ body {
   overflow: hidden;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(0, 212, 255, 0.12), transparent 55%),
-    radial-gradient(ellipse 90% 60% at 100% 50%, rgba(124, 252, 0, 0.07), transparent 50%),
-    linear-gradient(180deg, #020205 0%, #030308 40%, #020205 100%);
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(255, 74, 131, 0.12), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 50%, rgba(242, 21, 95, 0.07), transparent 50%),
+    linear-gradient(180deg, #050506 0%, #050506 40%, #050506 100%);
 }
 
 .ambient-orb {
@@ -109,7 +109,7 @@ body {
   height: min(55vw, 520px);
   top: -8%;
   left: -6%;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.45), rgba(0, 212, 255, 0) 68%);
+  background: radial-gradient(circle, rgba(255, 74, 131, 0.45), rgba(255, 74, 131, 0) 68%);
   animation: orb-drift-1 22s ease-in-out infinite;
 }
 
@@ -118,7 +118,7 @@ body {
   height: min(48vw, 440px);
   top: 28%;
   right: -10%;
-  background: radial-gradient(circle, rgba(124, 252, 0, 0.38), rgba(124, 252, 0, 0) 70%);
+  background: radial-gradient(circle, rgba(242, 21, 95, 0.38), rgba(242, 21, 95, 0) 70%);
   animation: orb-drift-2 26s ease-in-out infinite;
 }
 
@@ -154,7 +154,7 @@ body {
 .ambient-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 35%, rgba(2, 2, 5, 0.75) 100%);
+  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 35%, rgba(5, 5, 6, 0.75) 100%);
 }
 
 @keyframes orb-drift-1 {
@@ -211,7 +211,7 @@ a {
   z-index: 50;
   backdrop-filter: blur(28px) saturate(1.4);
   -webkit-backdrop-filter: blur(28px) saturate(1.4);
-  background: linear-gradient(180deg, rgba(8, 12, 20, 0.82), rgba(4, 6, 12, 0.62));
+  background: linear-gradient(180deg, rgba(12, 12, 15, 0.82), rgba(4, 6, 12, 0.62));
   border-bottom: 1px solid var(--glass-border);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   padding-top: env(safe-area-inset-top);
@@ -237,7 +237,7 @@ a {
   height: 44px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 0 28px rgba(0, 212, 255, 0.35), 0 0 12px rgba(124, 252, 0, 0.2);
+  box-shadow: 0 0 28px rgba(255, 74, 131, 0.35), 0 0 12px rgba(242, 21, 95, 0.2);
 }
 
 .brand-text {
@@ -281,8 +281,8 @@ a {
   justify-content: center;
   padding: 0.65rem 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--green), #39d353);
-  color: #041105;
+  background: linear-gradient(135deg, var(--green), #c80e4d);
+  color: #ffffff;
   font-size: 0.85rem;
   font-weight: 700;
   border: none;
@@ -291,7 +291,7 @@ a {
 
 .nav-cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 30px rgba(124, 252, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(242, 21, 95, 0.25);
 }
 
 .nav-cta-finance {
@@ -314,7 +314,7 @@ a {
 
 .nav-cta-ads {
   background: linear-gradient(135deg, var(--ads-bright), var(--ads));
-  color: #030308;
+  color: #050506;
 }
 
 .nav-cta-ads:hover {
@@ -376,7 +376,7 @@ a {
 
 .btn-ads {
   background: linear-gradient(135deg, var(--ads-bright), var(--ads));
-  color: #030308;
+  color: #050506;
   box-shadow: 0 12px 40px rgba(0, 255, 136, 0.22);
 }
 
@@ -462,8 +462,8 @@ a {
   padding: clamp(2.5rem, 6vw, 4rem) 0;
   border-bottom: 1px solid var(--glass-border);
   background:
-    radial-gradient(ellipse 85% 55% at 50% 0%, rgba(0, 212, 255, 0.1), transparent 58%),
-    radial-gradient(ellipse 60% 45% at 20% 80%, rgba(124, 252, 0, 0.06), transparent 50%),
+    radial-gradient(ellipse 85% 55% at 50% 0%, rgba(255, 74, 131, 0.1), transparent 58%),
+    radial-gradient(ellipse 60% 45% at 20% 80%, rgba(242, 21, 95, 0.06), transparent 50%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
 }
 
@@ -482,7 +482,7 @@ a {
     155deg,
     rgba(255, 255, 255, 0.14) 0%,
     rgba(255, 255, 255, 0.05) 42%,
-    rgba(0, 212, 255, 0.04) 100%
+    rgba(255, 74, 131, 0.04) 100%
   );
   backdrop-filter: blur(32px) saturate(1.6);
   -webkit-backdrop-filter: blur(32px) saturate(1.6);
@@ -490,7 +490,7 @@ a {
     inset 0 1px 0 rgba(255, 255, 255, 0.28),
     inset 0 -1px 0 rgba(0, 0, 0, 0.2),
     0 24px 70px rgba(0, 0, 0, 0.5),
-    0 0 80px rgba(0, 212, 255, 0.08);
+    0 0 80px rgba(255, 74, 131, 0.08);
 }
 
 .philosophy-glass > * {
@@ -573,9 +573,9 @@ a {
 }
 
 .philosophy-point-good {
-  border-color: rgba(124, 252, 0, 0.35);
-  background: linear-gradient(145deg, rgba(124, 252, 0, 0.12), rgba(255, 255, 255, 0.03));
-  box-shadow: inset 0 1px 0 rgba(180, 255, 120, 0.15), 0 0 24px rgba(124, 252, 0, 0.06);
+  border-color: rgba(242, 21, 95, 0.35);
+  background: linear-gradient(145deg, rgba(242, 21, 95, 0.12), rgba(255, 255, 255, 0.03));
+  box-shadow: inset 0 1px 0 rgba(255, 140, 176, 0.15), 0 0 24px rgba(242, 21, 95, 0.06);
 }
 
 .philosophy-point-good strong {
@@ -608,8 +608,8 @@ a {
   padding: 2.75rem 0 3rem;
   border-bottom: 1px solid var(--glass-border);
   background:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 252, 0, 0.12), transparent 58%),
-    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(0, 212, 255, 0.06), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(242, 21, 95, 0.12), transparent 58%),
+    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(255, 74, 131, 0.06), transparent 50%),
     linear-gradient(180deg, rgba(8, 14, 8, 0.4), transparent);
 }
 
@@ -649,12 +649,12 @@ a {
 .sovereign-badge {
   width: min(100%, 420px);
   height: auto;
-  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 40px rgba(124, 252, 0, 0.15));
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 40px rgba(242, 21, 95, 0.15));
 }
 
 .sovereign-card {
   padding: 1.25rem 1.35rem;
-  border-color: rgba(124, 252, 0, 0.16);
+  border-color: rgba(242, 21, 95, 0.16);
 }
 
 .sovereign-card h3 {
@@ -689,8 +689,8 @@ a {
 }
 
 .pill-sovereign {
-  border-color: rgba(124, 252, 0, 0.28);
-  background: rgba(124, 252, 0, 0.06);
+  border-color: rgba(242, 21, 95, 0.28);
+  background: rgba(242, 21, 95, 0.06);
   color: var(--green);
 }
 
@@ -743,11 +743,11 @@ a {
 
 .network-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(124, 252, 0, 0.35);
+  border-color: rgba(242, 21, 95, 0.35);
   box-shadow:
     inset 0 1px 0 var(--glass-highlight),
     0 24px 60px rgba(0, 0, 0, 0.5),
-    0 0 40px rgba(124, 252, 0, 0.12);
+    0 0 40px rgba(242, 21, 95, 0.12);
 }
 
 .network-card-finance:hover {
@@ -908,8 +908,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 15%, rgba(0, 212, 255, 0.2), transparent 45%),
-    radial-gradient(circle at 85% 5%, rgba(124, 252, 0, 0.12), transparent 32%),
+    radial-gradient(circle at 50% 15%, rgba(255, 74, 131, 0.2), transparent 45%),
+    radial-gradient(circle at 85% 5%, rgba(242, 21, 95, 0.12), transparent 32%),
     radial-gradient(circle at 15% 75%, rgba(0, 255, 136, 0.08), transparent 28%);
   pointer-events: none;
 }
@@ -920,8 +920,8 @@ a {
   opacity: 0.45;
   background-image:
     radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.9), transparent),
-    radial-gradient(1px 1px at 80px 120px, rgba(0, 212, 255, 0.7), transparent),
-    radial-gradient(1px 1px at 160px 60px, rgba(124, 252, 0, 0.6), transparent),
+    radial-gradient(1px 1px at 80px 120px, rgba(255, 74, 131, 0.7), transparent),
+    radial-gradient(1px 1px at 160px 60px, rgba(242, 21, 95, 0.6), transparent),
     radial-gradient(1px 1px at 240px 180px, rgba(255, 255, 255, 0.8), transparent),
     radial-gradient(1px 1px at 320px 40px, rgba(255, 255, 255, 0.5), transparent);
   background-size: 360px 220px;
@@ -994,12 +994,12 @@ a {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--green-bright), var(--green));
-  color: #041105;
-  box-shadow: 0 12px 40px rgba(124, 252, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  box-shadow: 0 12px 40px rgba(242, 21, 95, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 16px 50px rgba(124, 252, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 16px 50px rgba(242, 21, 95, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-secondary {
@@ -1037,7 +1037,7 @@ a {
   position: absolute;
   inset: -12%;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.35), rgba(124, 252, 0, 0.15) 45%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 74, 131, 0.35), rgba(242, 21, 95, 0.15) 45%, transparent 70%);
   filter: blur(32px);
   z-index: -1;
   animation: logo-pulse 6s ease-in-out infinite;
@@ -1073,7 +1073,7 @@ a {
   width: 100%;
   height: auto;
   border-radius: 24px;
-  box-shadow: var(--shadow), var(--neon-blue), 0 0 60px rgba(124, 252, 0, 0.12);
+  box-shadow: var(--shadow), var(--neon-blue), 0 0 60px rgba(242, 21, 95, 0.12);
 }
 
 .hero-logo-wrap::after {
@@ -1215,9 +1215,9 @@ a {
 }
 
 .product-card.live {
-  border-color: rgba(124, 252, 0, 0.28);
+  border-color: rgba(242, 21, 95, 0.28);
   background:
-    linear-gradient(180deg, rgba(124, 252, 0, 0.08), rgba(255, 255, 255, 0.02)),
+    linear-gradient(180deg, rgba(242, 21, 95, 0.08), rgba(255, 255, 255, 0.02)),
     var(--bg-card);
 }
 
@@ -1258,7 +1258,7 @@ a {
 .badge-live {
   background: var(--green-dim);
   color: var(--green);
-  border: 1px solid rgba(124, 252, 0, 0.25);
+  border: 1px solid rgba(242, 21, 95, 0.25);
 }
 
 .badge-soon {
@@ -1334,7 +1334,7 @@ a {
 
 .site-footer {
   border-top: 1px solid var(--glass-border);
-  background: linear-gradient(180deg, rgba(2, 2, 5, 0.92), #010103);
+  background: linear-gradient(180deg, rgba(5, 5, 6, 0.92), #010103);
   padding: 2rem 0 calc(2.5rem + env(safe-area-inset-bottom));
   backdrop-filter: blur(16px);
 }

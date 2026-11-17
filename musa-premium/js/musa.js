@@ -32,6 +32,38 @@
     });
   });
 
+  // Official emblem + registration documents: block right-click save and drag-out.
+  document.querySelectorAll(".emblem-protect, .doc-protect").forEach((el) => {
+    el.addEventListener("contextmenu", (e) => e.preventDefault());
+    el.addEventListener("dragstart", (e) => e.preventDefault());
+  });
+
+  // Moving rails (platform conveyor, domain marquee): pause on touch / click / hover,
+  // keep running on their own when nobody is interacting.
+  document.querySelectorAll(".rail-pause").forEach((rail) => {
+    let resumeTimer = 0;
+    const pause = () => {
+      clearTimeout(resumeTimer);
+      rail.classList.add("is-paused");
+    };
+    const resumeSoon = (delay) => {
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(() => rail.classList.remove("is-paused"), delay);
+    };
+    rail.addEventListener("pointerdown", pause, { passive: true });
+    rail.addEventListener("touchstart", pause, { passive: true });
+    rail.addEventListener("click", () => {
+      pause();
+      resumeSoon(3000);
+    });
+    rail.addEventListener("pointerup", () => resumeSoon(3000), { passive: true });
+    rail.addEventListener("touchend", () => resumeSoon(3000), { passive: true });
+    rail.addEventListener("touchcancel", () => resumeSoon(3000), { passive: true });
+    rail.addEventListener("pointercancel", () => resumeSoon(3000), { passive: true });
+    // mouse: hover already pauses via CSS; leaving resumes right away
+    rail.addEventListener("mouseleave", () => resumeSoon(0));
+  });
+
   document.querySelectorAll(".reveal").forEach((el) => {
     el.classList.add("is-visible");
   });
@@ -97,7 +129,7 @@
     const brainTexts = [];
     document.querySelectorAll("span, p").forEach((el) => {
       const t = el.textContent || "";
-      if (t.includes("SG16 Mistral X") && t.includes("live")) brainTexts.push(el);
+      if (t.includes("SG16 Brain") && t.includes("Live")) brainTexts.push(el);
       if (t.includes("platforms live")) brainTexts.push(el);
     });
 
@@ -107,7 +139,7 @@
         byId[p.id] = p;
       });
       const brain = byId.brain;
-      const productIds = ["engine", "children", "finance", "geo", "ads"];
+      const productIds = ["engine", "children", "finance", "geo", "ads", "identifier"];
       const liveCount = productIds.filter((id) => byId[id] && byId[id].ok).length;
 
       document.querySelectorAll("[data-live-badge]").forEach((badge) => {
@@ -119,11 +151,14 @@
       document.querySelectorAll("*").forEach((el) => {
         if (el.children.length > 0) return;
         const txt = el.textContent?.trim() || "";
-        if (txt === "SG16 Mistral X · checking…" || txt.startsWith("SG16 Mistral X ·")) {
-          el.textContent = brain && brain.ok ? "SG16 Mistral X · live 24/7" : "Brain · check later";
+        if (txt === "SG16 Brain · checking…" || txt.startsWith("SG16 Brain · Live")) {
+          el.textContent = brain && brain.ok ? "SG16 Brain · Live 24/7" : "Brain · check later";
         }
-        if (txt === "Platforms · checking…" || /\d\/5 platforms live/.test(txt)) {
+        if (txt === "Platforms · checking…" || /^\d+\/\d+ platforms live$/.test(txt)) {
           el.textContent = liveCount + "/" + productIds.length + " platforms live";
+        }
+        if (/^\d+\/\d+ live$/.test(txt)) {
+          el.textContent = liveCount + "/" + productIds.length + " live";
         }
       });
 

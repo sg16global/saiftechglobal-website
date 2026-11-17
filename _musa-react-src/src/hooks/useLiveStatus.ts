@@ -10,9 +10,9 @@ export interface LiveState {
 
 const FALLBACK: LiveState = {
   brainLive: true,
-  liveCount: 5,
-  total: 5,
-  perPlatform: { engine: true, finance: true, children: true, geo: true, ads: true },
+  liveCount: 6,
+  total: 6,
+  perPlatform: { engine: true, finance: true, children: true, geo: true, ads: true, identifier: true },
   line: "",
 };
 
@@ -21,7 +21,7 @@ export function useLiveStatus() {
   const [state, setState] = useState<LiveState>({
     brainLive: null,
     liveCount: 0,
-    total: 5,
+    total: 6,
     perPlatform: {},
     line: "Checking live APIs…",
   });
@@ -32,7 +32,7 @@ export function useLiveStatus() {
       if (!cancelled) {
         setState({
           ...FALLBACK,
-          line: "SG16 AI Engine · live   ·   SG16 Finance · live   ·   SG16 Children World · live   ·   Geo Monitor · live   ·   Ads Network · live",
+          line: "SG16 AI Engine · live   ·   SG16 Finance · live   ·   SG16 Children World · live   ·   Geo Monitor · live   ·   Ads Network · live   ·   SG16 Identifier · live",
         });
       }
     }, 3500);
@@ -46,7 +46,7 @@ export function useLiveStatus() {
         (data.platforms || []).forEach((p: { id: string; ok: boolean; label: string }) => {
           byId[p.id] = p;
         });
-        const ids = ["engine", "children", "finance", "geo", "ads"];
+        const ids = ["engine", "children", "finance", "geo", "ads", "identifier"];
         const per: Record<string, boolean> = {};
         ids.forEach((id) => (per[id] = !!byId[id]?.ok));
         const liveCount = ids.filter((id) => per[id]).length;
@@ -66,7 +66,7 @@ export function useLiveStatus() {
         clearTimeout(timer);
         setState({
           ...FALLBACK,
-          line: "SG16 AI Engine · live   ·   SG16 Finance · live   ·   SG16 Children World · live   ·   Geo Monitor · live   ·   Ads Network · live",
+          line: "SG16 AI Engine · live   ·   SG16 Finance · live   ·   SG16 Children World · live   ·   Geo Monitor · live   ·   Ads Network · live   ·   SG16 Identifier · live",
         });
       });
 

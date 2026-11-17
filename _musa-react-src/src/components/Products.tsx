@@ -73,7 +73,7 @@ export default function Products({ live }: { live: LiveState }) {
                     href={p.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`group inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r px-4 py-3 text-sm font-bold text-[#140800] transition hover:brightness-110 ${a.gradient}`}
+                    className={`group inline-flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-gradient-to-r px-4 py-3 text-sm font-bold text-white transition hover:brightness-110 ${a.gradient}`}
                     aria-label={`Visit ${p.displayUrl} (opens in new tab)`}
                   >
                     Visit {p.displayUrl}
@@ -94,7 +94,7 @@ export default function Products({ live }: { live: LiveState }) {
 
           {/* Enterprise — original content preserved */}
           <article className="reveal glass-orange glass-hover relative overflow-hidden rounded-3xl p-6 sm:p-7" style={{ ["--reveal-delay" as string]: "200ms" }}>
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-orange-500 via-amber-300 to-orange-500" aria-hidden="true" />
+            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-orange-500 via-orange-200 to-orange-500" aria-hidden="true" />
             <div className="flex items-start justify-between gap-4">
               <div>
                 <span className="inline-flex items-center rounded-full border border-orange-300/25 bg-orange-500/10 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.14em] text-orange-200">
