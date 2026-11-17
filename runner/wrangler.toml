@@ -9,7 +9,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "stg-company-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"   # same database as the website
+database_id = "ae1e0668-afc1-4d23-9514-78955aa051d5"   # same database as the website
 
 [ai]
 binding = "AI"
